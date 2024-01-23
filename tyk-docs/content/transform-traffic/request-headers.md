@@ -1,12 +1,10 @@
 ---
 date: 2017-03-23T17:46:28Z
-title: Request Headers
-menu:
-  main:
-    parent: "Transform Traffic"
-weight: 1 
+title: Request Header Transformation
+tags: ["Request Transform", "Header Transform", "transform"]
 aliases:
   - /advanced-configuration/transform-traffic/request-headers/
+description: "How to transform the headers for an API Request"
 ---
 
 ## Overview
