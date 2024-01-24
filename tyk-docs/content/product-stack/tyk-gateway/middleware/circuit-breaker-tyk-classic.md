@@ -63,6 +63,6 @@ You can set up the various configurations options for the breaker in the drawer 
 Use the *save* or *create* buttons to save the changes and make the circuit breaker active.
 
 #### Step 4: Optionally configure webhooks to respond to the circuit breaker events
-The Dashboard supports the separate `BreakerTripped` and `BreakerReset` events, but not the combined `BreakerTriggered` [event type]({{< ref "basic-config-and-security/report-monitor-trigger-events/event-types.md" >}}). You should use **API Designer > Advanced Options** to add a Webhook plugin to your endpoint for each event.
+The Dashboard supports the separate `BreakerTripped` and `BreakerReset` events, but not the combined `BreakerTriggered` [event type]({{< ref "basic-config-and-security/report-monitor-trigger-events/event-types" >}}). You should use **API Designer > Advanced Options** to add a Webhook plugin to your endpoint for each event.
 
 {{< img src="/img/dashboard/system-management/webhook-breaker.png" alt="Webhook events" >}}

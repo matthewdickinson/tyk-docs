@@ -46,7 +46,7 @@ The value of the samples have to be collected within a 10 sec window before they
 
 Once the breaker has been tripped it will remain _open_, blocking calls to the endpoint until a configurable cooldown (or return to service) period has elapsed. While the breaker is _open_, requests to the endpoint will return `HTTP 503 Service temporarily unavailable`.
 
-In some scenarios the upstream service might recover more quickly than expected. Rather than being forced to wait until the end of the cooldown before reseting the circuit breaker (which will immediately allow full access to the upstream service), the middleware supports a _half-open_ mode.
+In some scenarios the upstream service might recover more quickly than expected. Rather than being forced to wait until the end of the cooldown before resetting the circuit breaker (which will immediately allow full access to the upstream service), the middleware supports a _half-open_ mode.
 
 In the _half-open_ mode, Tyk will periodically issue requests to the upstream service to check whether the path has been restored (while continuing to block client requests). If the Gateway detects that the path has been reconnected, the circuit breaker will be automatically reset (_closed_) and requests will be passed to the upstream again.
 
@@ -69,7 +69,7 @@ If you are using the Service Discovery module, every time the breaker trips, Tyk
 The circuit breaker works at the endpoint level independent of the number of upstream hosts are servicing the requests. Thus, if you have multiple upstream targets for an API, the sample and failure counts are accumulated across **all** upstream requests. If the failure rate exceeds the threshold, the circuit breaker will trip even if only some of your upstream hosts are failing. Operating in _half-open_ mode will of course cause the breaker to reset if a responsive upstream receives a request, but the `BreakerTripped` (or `BreakerTriggered`) event should alert you to the fact that at least one host is failing.
 
 ### Using the circuit breaker with multiple Tyk Gateways
-Circuit breakers are individual on a single Tyk Gateway, they do not centralise or pool back-end data. This ensures optimum speed of response and resilience to Gateway failure. This means that in a load balanced environment where multiple Tyk Gateways are used, some traffic can spill through even after the circuit breaker has tripped on one Gateway as other Gateways continue to serve traffic to the upstream before their own breakers trip.
+Circuit breakers operate on a single Tyk Gateway, they do not centralise or pool back-end data. This ensures optimum speed of response and resilience to Gateway failure. Subsequently, in a load balanced environment where multiple Tyk Gateways are used, some traffic can spill through even after the circuit breaker has tripped on one Gateway as other Gateways continue to serve traffic to the upstream before their own breakers trip.
 
 ### Circuit breaker events
 The circuit breaker automatically controls the flow of requests to the upstream services quickly and efficiently, but it is equally important to alert you to the fact that there is an issue and to confirm when traffic will recommence once the issue is resolved. Tyk's [Event]({{< ref "basic-config-and-security/report-monitor-trigger-events" >}}) system provides the method by which the circuit breaker can alert you to these occurrences.

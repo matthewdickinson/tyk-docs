@@ -25,7 +25,7 @@ If you want to use dynamic data from context variables, you must [enable]({{< re
 If you're using the newer Tyk OAS APIs, then check out the [Tyk OAS]({{< ref "product-stack/tyk-gateway/middleware/request-header-tyk-oas" >}}) page.
 
 ## Configuring the Request Header Transform in the Tyk Classic API Definition
-The API-level and endpoint-level request header transforms are configured in different sections of the API definition, though have a common configuration.
+The API-level and endpoint-level request header transforms have a common configuration but are configured in different sections of the API definition.
 
 #### API-level transform
 To **append** headers to all requests to your API (i.e. for all endpoints) you must add a new `global_headers` object to the `versions` section of your API definition. This contains a list of key:value pairs, being the names and values of the headers to be added to requests.

@@ -6,7 +6,7 @@ description: "How to enforce timeouts to keep your Tyk installation responding"
 ---
 
 ## Overview
-In any system, a task or operation takes a certain period of time to complete. When a client makes a request to Tyk, it will be dependent upon the responsiveness of the upstream service before it can continue. If the upstream service is suffering from resource overload or congestion the response may be returned too late leading to unacceptable experience for the end user or even to instability in the system.
+In any system, a task or operation takes a certain period of time to complete. When a client makes a request to the Tyk Gateway, it will be dependent upon the responsiveness of the upstream service before it can continue. If the upstream service is suffering from resource overload or congestion the response may be returned too late leading to unacceptable experience for the end user or even to instability in the system.
 
 Tyk's Enforced Timeout middleware can be used to apply a maximum time that the Gateway will wait for a response before it terminates (or times out) the request. If the timeout expires, then Tyk will notify the client with an `HTTP 504 Gateway Timeout` error.
 
