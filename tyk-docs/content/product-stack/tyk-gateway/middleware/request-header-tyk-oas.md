@@ -106,7 +106,7 @@ It will also delete one header (if present) from each request:
 The configuration above is a complete and valid Tyk OAS API Definition that you can import into Tyk to try out the API-level request header transform.
 
 #### Endpoint-level transform
-The request method transform middleware (`transformRequestMethod`) can be added to the `operations` section of the Tyk OAS Extension (`x-tyk-api-gateway`) in your Tyk OAS API Definition for the appropriate `operationId` (as configured in the `paths` section of your OpenAPI Document).
+The request header transform middleware (`transformRequestHeaders`) can be added to the `operations` section of the Tyk OAS Extension (`x-tyk-api-gateway`) in your Tyk OAS API Definition for the appropriate `operationId` (as configured in the `paths` section of your OpenAPI Document).
 
 You only need to enable the middleware (set `enabled:true`) and then configure the details of headers to `add` and those to `remove`. The design of the Tyk OAS API Definition takes advantage of the `operationID` defined in the OpenAPI Document that declares both the path and method for which the headers should be transformed.
 
@@ -115,7 +115,7 @@ For example:
 {
     "components": {},
     "info": {
-        "title": "example-request-method",
+        "title": "example-request-header",
         "version": "1.0.0"
     },
     "openapi": "3.0.3",
@@ -133,7 +133,7 @@ For example:
     },
     "x-tyk-api-gateway": {
         "info": {
-            "name": "example-request-method",
+            "name": "example-request-header",
             "state": {
                 "active": true
             }
@@ -143,7 +143,7 @@ For example:
         },
         "server": {
             "listenPath": {
-                "value": "/example-request-method/",
+                "value": "/example-request-header/",
                 "strip": true
             }
         },
@@ -182,7 +182,7 @@ If the API-level transform in the previous [example]({{< ref "product-stack/tyk-
 and to remove one:
  - `Auth_Id` 
 
-## Configuring the Request Method Transform in the API Designer
+## Configuring the Request Header Transform in the API Designer
 Adding and configuring the transforms to your API endpoints is easy when using the API Designer in the Tyk Dashboard, simply follow the steps taken in this short video:
 
  < placeholder for video >
