@@ -114,7 +114,7 @@ From the **Endpoint Designer** add an endpoint that matches the path for which y
 
 #### Step 2: Configure the transform
 
-You must also set a method and a request pattern to match against. These patterns can contain wildcards in the form of any string bracketed by curly braces. These wildcards are so they are human readable and do not translate to variable names. Under the hood, a wildcard translates to the "match everything" regex of: `(.*)`.
+You must also set a method and a request pattern (endpoint) to match against. These patterns can contain wildcards in the form of any string bracketed by curly braces. These wildcards are so they are human readable and do not translate to variable names. Under the hood, a wildcard translates to the "match everything" regex of: `(.*)`.
 
 {{< img src="/img/2.10/modify_headers.png" alt="Endpoint designer" >}}
 
