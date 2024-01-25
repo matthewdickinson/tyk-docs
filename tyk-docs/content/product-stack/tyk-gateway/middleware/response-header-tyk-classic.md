@@ -76,10 +76,10 @@ It will also delete one header (if present) from each response:
 To configure response header transformation for a specific endpoint you must add a new `transform_response_headers` object to the `extended_paths` section of your API definition.
 
 It has the following configuration:
- - `path`: The path to match on
- - `method`: The method to match on
- - `delete_headers`: A list of the headers that should be deleted from the response
- - `add_headers`: A list of headers, in key:value pairs, that should be added to the response
+ - `path`: the path to match on
+ - `method`: the HTTP method to match on
+ - `delete_headers`: a list of the headers that should be deleted from the response
+ - `add_headers`: a list of headers, in key:value pairs, that should be added to the response
 
 For example:
 ```json  {linenos=true, linenostart=1}
