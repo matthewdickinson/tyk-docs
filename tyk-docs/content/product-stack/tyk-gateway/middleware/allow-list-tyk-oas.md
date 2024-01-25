@@ -90,7 +90,7 @@ In this example the allow list middleware has been configured for HTTP `GET` and
  - the allow list has been configured to be case insensitive, so calls to `GET /Status/200` will be allowed
  - the endpoint path has not been terminated with `$` so requests to, for example, `GET /status/200/foobar` will be allowed as the [regular expression pattern match]({{< ref "product-stack/tyk-gateway/middleware/allow-list-middleware#endpoint-parsing" >}}) will recognise this as `GET /status/200`
 
-The configuration above is a complete and valid Tyk OAS API Definition that you can import into Tyk to try out the API-level response header transform.
+The configuration above is a complete and valid Tyk OAS API Definition that you can import into Tyk to try out the allow list feature.
 ## Configuring the allow list in the API Designer
 Adding the allow list to your API endpoints is easy when using the API Designer in the Tyk Dashboard, simply follow the steps taken in this short video:
 
