@@ -90,6 +90,7 @@ In this example the block list middleware has been configured for HTTP `GET` and
  - the block list has been configured to be case insensitive, so calls to `GET /Status/200` will also be blocked
  - the endpoint path has not been terminated with `$` so requests to, for example, `GET /status/200/foobar` will be rejected as the [regular expression pattern match]({{< ref "product-stack/tyk-gateway/middleware/block-list-middleware#endpoint-parsing" >}}) will recognise this as `GET /status/200`
 
+The configuration above is a complete and valid Tyk OAS API Definition that you can import into Tyk to try out the API-level response header transform.
 ## Configuring the block list in the API Designer
 Adding the block list to your API endpoints is easy when using the API Designer in the Tyk Dashboard, simply follow the steps taken in this short video:
 
