@@ -5,7 +5,6 @@ description: "How to transform the headers for an API Response"
 tags: ["Response Transform", "Header Transform", "transform"]
 ---
 
-## Overview
 Tyk enables you to modify header information when a response is proxied back to the client. This can be very useful in cases where you have an upstream API that potentially exposes sensitive headers that you need to remove.
 
 There are two options for this:
@@ -16,11 +15,11 @@ With the header transform middleware you can append or delete any number of head
 
 This middleware changes only the headers and not the payload. You can, however, combine this with the [Response Body Tranform]({{< ref "advanced-configuration/transform-traffic/response-body" >}}) to apply more complex transformation to responses.
 
-There are related [Request Header Transform]({{< ref "transform-traffic/request-headers" >}}) middleware (at API-level and endpoint-level) that provide the same functionality on the request from your client, prior to it being proxied to the upstream.
+There are related [Request Header Transform]({{< ref "transform-traffic/request-headers" >}}) middleware (at API-level and endpoint-level) that provide the same functionality on the request from a client, prior to it being proxied to the upstream.
 
 ## When to use response header transformation
-#### Customizing responses for specific clients
-A common use of the response header transform is when a client requires specific headers for their application to function correctly. For example, a client may require a specific header to indicate the status of a request or to provide additional information about the response.
+#### Customising responses for specific clients
+A frequent use case for response header transformation is when a client requires specific headers for their application to function correctly. For example, a client may require a specific header to indicate the status of a request or to provide additional information about the response.
 
 #### Adding security headers
 The response header transform allows you to add security headers to the response to protect against common attacks such as cross-site scripting (XSS) and cross-site request forgery (CSRF). Some security headers may be required for compliance with industry standards and, if not provided by the upstream, can be added by Tyk before forwarding the response to the client.
@@ -28,17 +27,17 @@ The response header transform allows you to add security headers to the response
 #### Adding metadata to response headers
 Adding metadata to response headers can be useful for tracking and analysing API usage, as well as for providing additional information to clients. For example, you may want to add a header that indicates the version of the API being used or the time taken to process the request.
 
-#### Modifying response headers for dynamic performance optimization
-You can use response header transformation to dynamically optimize the performance of the API. For example, you may want to indicate to the client the maximum number of requests that they can make in a given time period. By doing so through the response headers, you can perform dynamic optimisation of the load on the upstream service without triggering the rate limiter and so avoiding errors being sent to the client.
+#### Modifying response headers for dynamic performance optimisation
+You can use response header transformation to dynamically optimise the performance of the API. For example, you may want to indicate to the client the maximum number of requests that they can make in a given time period. By doing so through the response headers, you can perform dynamic optimisation of the load on the upstream service without triggering the rate limiter and so avoiding errors being sent to the client.
 
 ## How the response header transform works
 The response header transform can be applied per-API or per-endpoint; each has a separate entry in the API definition so that you can configure both API-level and endpoint-level transforms for a single API.
 
 The middleware is configured with a list of headers to delete from the response and a list of headers to add to the response. Each header to be added to the response is configured as a key:value pair.
- - The "delete header" functionality is intended to ensure that any header in the delete list is not present once the middleware completes so that, if a header on the list to be deleted is not originally present in the response, the middleware will ignore its omission.
+ - The "delete header" functionality is intended to ensure that any header in the delete list is not present once the middleware completes. If a header in the delete list is not present in the upstream response, the middleware will ignore the omission
  - The "add header" functionality will capitalise any header name provided, for example if you configure the middleware to append `x-request-id` it will be added to the response as `X-Request-Id`.
 
-In the response middleware chain, the endpoint-level transform is applied before the API-level transform so if both middleware are enabled, the API-level transform will operate on the headers that have been added by the endpoint-level transform (and will not receive those that have been deleted by it).
+In the response middleware chain, the endpoint-level transform is applied before the API-level transform. Subsequently, if both middleware are enabled, the API-level transform will operate on the headers that have been added by the endpoint-level transform (and will not receive those that have been deleted by it).
 
 #### Injecting dynamic data into headers
 You can enrich the response headers by injecting data from context variables or session objects into the headers.

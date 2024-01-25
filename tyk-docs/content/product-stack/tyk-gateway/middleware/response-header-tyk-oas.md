@@ -5,7 +5,6 @@ description: "Using the Response Header Transform middleware with Tyk OAS APIs"
 tags: ["Response Header Transform", "middleware", "per-endpoint", "Tyk OAS"]
 ---
 
-## Overview
 Tyk's [response header transform]({{< ref "advanced-configuration/transform-traffic/response-headers" >}}) middleware enables you to append or delete headers on responses received from the upstream service before sending them to the client.
 
 There are two options for this:
@@ -26,7 +25,7 @@ If you're using the legacy Tyk Classic APIs, then check out the [Tyk Classic]({{
 The API-level and endpoint-level response header transforms have a common configuration but are configured in different sections of the API definition.
 
 #### API-level transform
-To append headers to, or delete headers from, all responses from your API (i.e. for all endpoints) you must add a new `transformResponseHeaders` object to the `middleware.global` section of the Tyk OAS Extension (`x-tyk-api-gateway`) in your Tyk OAS API Definition.
+To append headers to, or delete headers from, responses from all endpoints defined for your API you must add a new `transformResponseHeaders` object to the `middleware.global` section of the Tyk OAS Extension (`x-tyk-api-gateway`) in your Tyk OAS API Definition.
 
 You only need to enable the middleware (set `enabled:true`) and then configure the details of headers to `add` and those to `remove`.
 
@@ -176,7 +175,7 @@ In this example the Response Header Transform middleware has been configured for
 The configuration above is a complete and valid Tyk OAS API Definition that you can import into Tyk to try out the endpoint-level response header transform.
 
 #### Combining API-level and Endpoint-level transforms
-If the API-level transform in the previous [example]({{< ref "product-stack/tyk-gateway/middleware/response-header-tyk-oas#api-level-transform" >}}) is applied to the same API, then because the endpoint-level transformation is performed first, the `X-Secret` header will be added (by the endpoint-level transform) and then removed (by the API-level transform) such that the overall effect of the two transforms for a call to `GET /status/200` would be to add four headers:
+If the example [API-level]({{< ref "product-stack/tyk-gateway/middleware/response-header-tyk-oas#api-level-transform" >}}) and [endpoint-level]({{< ref "product-stack/tyk-gateway/middleware/response-header-tyk-oas#endpoint-level-transform" >}}) transforms are applied to the same API, then the `X-Secret` header will be added (by the endpoint-level transform first) and then removed (by the API-level transform). Subsequently, the result of the two transforms for a call to `GET /status/200` would be to add four headers:
  - `X-Request-ID`
  - `X-User-ID`
  - `X-Static`
