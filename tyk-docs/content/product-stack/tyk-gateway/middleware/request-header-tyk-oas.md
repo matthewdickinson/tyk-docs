@@ -5,7 +5,6 @@ description: "Using the Request Header Transform middleware with Tyk OAS APIs"
 tags: ["Request Header Transform", "middleware", "per-endpoint", "Tyk OAS"]
 ---
 
-## Overview
 Tyk's [request header transform]({{< ref "transform-traffic/request-headers" >}}) middleware enables you to append or delete headers on requests to your API endpoints before they are passed to your upstream service.
 
 There are two options for this:

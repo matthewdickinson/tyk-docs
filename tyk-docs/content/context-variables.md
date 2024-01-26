@@ -10,8 +10,7 @@ aliases:
   - /getting-started/key-concepts/context-variables/
 ---
 
-## Overview
-Context variables are extracted from the request at the start of the middleware chain. These values can be very useful for later transformation of request data, for example, in converting a Form-based POST into a JSON-based PUT or to capture an IP address as a header.
+Context variables are extracted from the request at the start of the middleware chain. These values can be very useful for later transformation of request data, for example, in converting a form POST request into a JSON PUT request or to capture an IP address as a header.
 
 {{< note success >}}
 **Note**  
@@ -77,8 +76,8 @@ Context variables are exposed in three middleware plugins but are accessed diffe
 
 ## Enabling Context Variables for use with Tyk Classic APIs
 1. In the your Tyk Dashboard, select `APIs` from the `System Management` menu 
-2. Open the API you want to add Context Variable to. 
-3. Select the `Advanced Options` tab and select `Enable context variables`
+2. Open the API you want to add Context Variable to
+3. Click the `Advanced Options` tab and then select the `Enable context variables` option
 
 {{< img src="/img/2.10/context_variables.png" alt="Context Variables" >}}
 

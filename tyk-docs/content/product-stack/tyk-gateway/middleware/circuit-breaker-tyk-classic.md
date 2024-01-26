@@ -5,7 +5,6 @@ description: "Using the Circuit Breaker with Tyk Classic APIs"
 tags: ["circuit breaker", "middleware", "per-endpoint", "Tyk Classic"]
 ---
 
-## Overview
 Tyk's [circuit breaker]({{< ref "planning-for-production/ensure-high-availability/circuit-breakers" >}}) middleware is configured at the endpoint level, where it monitors the rate of failure responses (HTTP 500 or higher) received from the upstream service. If that failure rate exceeds the configured threshold, the circuit breaker will trip and Tyk will block further requests to that endpoint (returning `HTTP 503 Service temporarily unavailable`) until the end of a recovery (cooldown) time period.
 
 When working with Tyk Classic APIs the circuit breaker is configured in the Tyk Classic API Definition; this can be done manually within the `.json` file or from the API Designer in the Tyk Dashboard.

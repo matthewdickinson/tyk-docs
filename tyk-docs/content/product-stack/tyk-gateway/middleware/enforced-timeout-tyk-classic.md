@@ -5,7 +5,6 @@ description: "Using the Enforced Timeout with Tyk Classic APIs"
 tags: ["Enforced Timeouts", "middleware", "per-endpoint", "Tyk Classic"]
 ---
 
-## Overview
 Tyk's [enforced timeout]({{< ref "planning-for-production/ensure-high-availability/enforced-timeouts" >}}) middleware is configured at the endpoint level, where it sets a limit on the response time from the upstream service. If the upstream takes too long to respond to a request, Tyk will terminate the request and return `504 Gateway Timeout` to the client.
 
 When working with Tyk Classic APIs the enforced timeout is configured in the Tyk Classic API Definition; this can be done manually within the `.json` file or from the API Designer in the Tyk Dashboard.

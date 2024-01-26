@@ -5,7 +5,6 @@ tags: ["Request Transform", "Method Transform", "transform"]
 description: "How to transform the HTTP Method for an API Request"
 ---
 
-## Overview
 Tyk's Request Method Transform middleware allows you to modify the HTTP method of incoming requests to an API endpoint prior to the request being proxied to the upstream service. You might use this, for example, to map requests from older clients to the latest API version, ensuring backward compatibility and a smooth transition for clients that have not yet updated to the latest version. It is a simple middleware that changes only the method and not the payload or headers. You can, however, combine this with the [Request Header Transform]({{< ref "transform-traffic/request-headers" >}}) and [Request Body Tranform]({{< ref "transform-traffic/request-body" >}}) to apply more complex transformation to requests.
 
 ## When to use request method transformation

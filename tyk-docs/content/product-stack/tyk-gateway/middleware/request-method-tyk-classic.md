@@ -5,7 +5,6 @@ description: "Using the Request Method Transform middleware with Tyk Classic API
 tags: ["Request Method Transform", "middleware", "per-endpoint", "Tyk Classic"]
 ---
 
-## Overview
 Tyk's [request method transform]({{< ref "advanced-configuration/transform-traffic/request-method-transform" >}}) middleware is configured at the endpoint level, where it modifies the HTTP method used in the request to a configured value.
 
 When working with Tyk Classic APIs the transformation is configured in the Tyk Classic API Definition; this can be done manually within the `.json` file or from the API Designer in the Tyk Dashboard.

@@ -7,7 +7,6 @@ aliases:
 description: "How to transform the headers for an API Request"
 ---
 
-## Overview
 Tyk allows you to modify the headers of incoming requests to your API endpoints before they are passed to your upstream service.
 
 There are two options for this:
@@ -47,7 +46,7 @@ In the request middleware chain, the API-level transform is applied before the e
 
 #### Injecting dynamic data into headers
 You can enrich the request headers by injecting data from context variables or session objects into the headers.
-- [Context variables]({{< ref "context-variables" >}}), extracted from the request at the start of the middleware chain, can be injected into added headers using the `$tyk_context.` namespace
+- [Context variables]({{< ref "context-variables" >}}) are extracted from the request at the start of the middleware chain and can be injected into added headers using the `$tyk_context.` namespace
 - [Session metadata]({{< ref "getting-started/key-concepts/session-meta-data" >}}), from the Tyk Session Object linked to the request, can be injected into added headers using the `$tyk_meta.` namespace
 
 <hr>

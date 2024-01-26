@@ -5,7 +5,6 @@ description: "Using the Request Method Transform middleware with Tyk OAS APIs"
 tags: ["Request Method Transform", "middleware", "per-endpoint", "Tyk OAS"]
 ---
 
-## Overview
 Tyk's [request method transform]({{< ref "advanced-configuration/transform-traffic/request-method-transform" >}}) middleware is configured at the endpoint level, where it modifies the HTTP method used in the request to a configured value.
 
 When working with Tyk OAS APIs the transformation is configured in the [Tyk OAS API Definition]({{< ref "tyk-apis/tyk-gateway-api/oas/x-tyk-oas-doc#operation" >}}); this can be done manually within the `.json` file or from the API Designer in the Tyk Dashboard.
