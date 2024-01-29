@@ -153,7 +153,7 @@ You can also set a global ignore case on the API level or across [the gateway]({
 
 ### Internal
 
-This plugin allows an endpoint to not be listened to by the Tyk Gateway but can be called by other APIs using the `tyk://self/` prefix.
+The [Internal Endpoint]({{< ref "product-stack/tyk-gateway/middleware/internal-endpoint-middleware" >}}) middleware instructs Tyk Gateway not to process external requests to the endpoint (which is a combination of HTTP method and path). Internal requests from other APIs will be processed.
 
 ### Method Transforms
 
