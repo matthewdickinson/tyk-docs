@@ -1464,10 +1464,22 @@ menu:
               path: /basic-config-and-security/reduce-latency/caching/global-cache/
               category: Page
               show: True
-            - title: "Advanced Caching"
-              path: /basic-config-and-security/reduce-latency/caching/advanced-cache/
-              category: Page
+            - title: "Endpoint Caching"
+              category: Directory
               show: True
+              menu:
+              - title: "Overview"
+                path: /basic-config-and-security/reduce-latency/caching/advanced-cache/
+                category: Page
+                show: True
+              - title: "Tyk OAS configuration"
+                path: /product-stack/tyk-gateway/middleware/endpoint-cache-tyk-oas
+                category: Page
+                show: True
+              - title: "Tyk Classic configuration"
+                path: /product-stack/tyk-gateway/middleware/endpoint-cache-tyk-classic
+                category: Page
+                show: True
             - title: "Upstream Cache Control"
               path: /basic-config-and-security/reduce-latency/caching/upstream-controlled-cache/
               category: Page
