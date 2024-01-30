@@ -7,7 +7,7 @@ tags: ["internal endpoint", "internal", "middleware", "per-endpoint", "Tyk OAS"]
 
 The [Internal Endpoint]({{< ref "product-stack/tyk-gateway/middleware/internal-endpoint-middleware" >}}) middleware instructs Tyk Gateway not to process external requests to the endpoint (which is a combination of HTTP method and path). Internal requests from other APIs will be processed.
 
-When working with Tyk OAS APIs the middleware is configured in the [Tyk OAS API Definition]({{< ref "tyk-apis/tyk-gateway-api/oas/x-tyk-oas-doc#operation" >}}) either manually within the `.json` file or from the API Designer in the Tyk Dashboard.
+When working with Tyk OAS APIs, the middleware is configured in the [Tyk OAS API Definition]({{< ref "tyk-apis/tyk-gateway-api/oas/x-tyk-oas-doc#operation" >}}) either manually within the `.json` file or from the API Designer in the Tyk Dashboard.
 
 If you're using the legacy Tyk Classic APIs, then check out the [Tyk Classic]({{< ref "product-stack/tyk-gateway/middleware/internal-endpoint-tyk-classic" >}}) page.
 
@@ -90,11 +90,11 @@ In this example, two endpoints have been defined:
  - the internal endpoint middleware has been configured for HTTP `GET` requests to the `/anything` endpoint
  - the [URL rewrite]({{< ref "transform-traffic/url-rewriting" >}}) middleware has been configured for HTTP `GET` requests to the `/redirect` endpoint
  
-Any calls made directly to `GET /example-internal-endpoint/anything` will be rejected, with Tyk returning `HTTP 403 Forbidden`.
+Any calls made directly to `GET /example-internal-endpoint/anything` will be rejected, with Tyk returning `HTTP 403 Forbidden`, since the `/anything` endpoint is internal.
 
 Any calls made to `GET /example-internal-endpoint/redirect` will be redirected to `/example-internal-endpoint/anything`. These will be proxied to the upstream because they originate from within Tyk Gateway (i.e. they are internal requests) - so the response from `GET http://httpbin.org/anything` will be returned.
 
-The configuration above is a complete and valid Tyk OAS API Definition that you can import into Tyk to try out the API-level response header transform.
+The configuration above is a complete and valid Tyk OAS API Definition that you can import into Tyk to try out the internal endpoint middleware.
 
 ## Configuring the middleware in the API Designer
 Adding the Internal Endpoint middleware to your API endpoints is easy when using the API Designer in the Tyk Dashboard, simply follow the steps taken in this short video:

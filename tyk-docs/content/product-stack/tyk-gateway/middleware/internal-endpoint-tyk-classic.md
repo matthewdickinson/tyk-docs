@@ -7,7 +7,7 @@ tags: ["internal endpoint", "internal", "middleware", "per-endpoint", "Tyk Class
 
 The [Internal Endpoint]({{< ref "product-stack/tyk-gateway/middleware/internal-endpoint-middleware" >}}) middleware instructs Tyk Gateway not to process external requests to the endpoint (which is a combination of HTTP method and path). Internal requests from other APIs will be processed.
 
-When working with Tyk Classic APIs the middleware is configured in the Tyk Classic API Definition either manually within the `.json` file or from the API Designer in the Tyk Dashboard.
+When working with Tyk Classic APIs, the middleware is configured in the Tyk Classic API Definition either manually within the `.json` file or from the API Designer in the Tyk Dashboard.
 
 If you're using the newer Tyk OAS APIs, then check out the [Tyk OAS]({{< ref "product-stack/tyk-gateway/middleware/internal-endpoint-tyk-oas" >}}) page.
 
@@ -33,7 +33,7 @@ For example:
 }
 ```
 
-In this example the internal endpoint middleware has been configured for HTTP `GET` requests to the `/status/200` endpoint. Any calls made to this endpoint that originate outside Tyk (i.e. externally) will be rejected with `HTTP 403 Forbidden`, however it can be reached internally by another API at `tyk://<listen_path>/status/200`.
+In this example the internal endpoint middleware has been configured for HTTP `GET` requests to the `/status/200` endpoint. Any requests made to this endpoint that originate externally to Tyk will be rejected with `HTTP 403 Forbidden`. Conversely, the endpoint can be reached internally by another API at `tyk://<listen_path>/status/200`.
 
 ## Configuring the middleware in the API Designer
 You can use the API Designer in the Tyk Dashboard to configure the internal endpoint middleware for your Tyk Classic API by following these steps.
@@ -44,4 +44,4 @@ From the **Endpoint Designer** add an endpoint that matches the path for which y
 < placeholder for image >
 
 #### Step 2: Save the API
-Use the *save* or *create* buttons to save the changes and make the middleware active.
+Use the *save* or *create* buttons to save the changes and activate the middleware.
