@@ -7,14 +7,14 @@ tags: ["Caching", "Cache", "Endpoint Cache", "selective caching", "middleware", 
 
 The [Endpoint Caching]({{< ref "basic-config-and-security/reduce-latency/caching/advanced-cache" >}}) middleware allows you to perform selective caching for specific endpoints rather than for the entire API, giving you granular control over which paths are cached.
 
-When working with Tyk Classic APIs the middleware is configured in the Tyk Classic API Definition either manually within the `.json` file or from the API Designer in the Tyk Dashboard.
+When working with Tyk Classic APIs the middleware is configured in the Tyk Classic API Definition. You can do this via the Tyk Dashboard API or in the API Designer.
 
 If you're using the newer Tyk OAS APIs, then check out the [Tyk OAS]({{< ref "product-stack/tyk-gateway/middleware/endpoint-cache-tyk-oas" >}}) page.
 
 ## Configuring the middleware in the Tyk Classic API Definition
 When using the Tyk Classic API Definition, there are two options for endpoint caching - simple and advanced.
 
-The [simple](#simple-endpoint-cache) option works with the API-level cache and allows you to select which endpoints are cached, but relies upon the cache timeout (refresh) configured at the API-level. It will cache all responses received from the endpoint regardless of the HTTP response code for all [safe requests]({{< ref "/basic-config-and-security/reduce-latency/caching#global-cache-safe-requests">}}).
+The [simple](#simple-endpoint-cache) option works with the API-level cache and allows you to select which endpoints are cached, but relies upon the cache timeout (refresh) configured at the API-level. It will cache all responses received from the endpoint regardless of the HTTP response code for all [safe requests]({{< ref "basic-config-and-security/reduce-latency/caching#global-cache-safe-requests">}}).
 
 The [advanced](#advanced-endpoint-cache) option allows you to cache more selectively, giving control over the HTTP response codes to be cached, a per-endpoint cache timeout and also the possibility of caching responses only to requests containing specific data in the request body.
 
@@ -65,7 +65,7 @@ The `advance_cache_config` object has the following configuration:
  - `method`: this method to match on
  - `timeout`: set to the refresh period for the cache (in seconds)
  - `cache_response_codes`: HTTP responses codes to be cached (for example `200`)
- - `cache_key_regex`: Pattern match for selective caching by body value
+ - `cache_key_regex`: pattern match for selective caching by body value
 
 For example:
 ```.json  {linenos=true, linenostart=1}
@@ -120,7 +120,7 @@ To enable and configure the simple endpoint cache, follow these instructions:
 From the **Advanced Options** tab configure the cache as follows:
  - **Enable caching** to enable the cache middleware
  - **Cache timeout** to configure the timeout (in seconds) for cached requests
- - **Cache only these status codes** is where you list which HTTP status codes should be cached, clicking **Add** after entering a code to add it to the list 
+ - **Cache only these status codes** is a list of HTTP status codes that should be cached, remember to click **Add** after entering each code to add it to the list 
  - **Cache all safe requests** ensure that this is **not** selected, otherwise the responses from all endpoints for the API will be cached
 
 {{< img src="/img/dashboard/endpoint-designer/cache-options.png" alt="Cache Options" >}}
@@ -155,7 +155,7 @@ Set the timeout and HTTP response codes for the endpoint. If you don't need to s
 {{< note success >}}
 **Note**  
 
-Body value match caching is not currently exposed in the Dashboard UI, so it must be enabled though either the raw API editor or the Dashboard API. 
+Body value match caching is not currently exposed in the Dashboard UI, so it must be enabled through either the raw API editor or the Dashboard API. 
 {{< /note >}}
 
 ##### Step 4: Save the API

@@ -7,7 +7,7 @@ description: "Detail of the Endpoint Caching middleware"
 
 When you use the API-level cache, Tyk will maintain a cache entry for each combination of request method, request path (endpoint) and API key (if authentication is enabled) for an API. The Endpoint Caching middleware allows you to perform selective caching for specific endpoints rather than for the entire API, giving you granular control over which paths are cached and allowing you to vary cache configuration across API versions.
 
-For details on the API-level cache you should refer to the [API-level cache]({{< ref "/basic-config-and-security/reduce-latency/caching/global-cache">}}) configuration page.
+For details on the API-level cache you should refer to the [API-level cache]({{< ref "basic-config-and-security/reduce-latency/caching/global-cache">}}) configuration page.
 
 ## When to use the Endpoint Caching middleware
 #### API with multiple endpoints
@@ -21,7 +21,7 @@ If caching is enabled then, by default, Tyk will create separate cache entries f
 
 The endpoint-level cache relies upon the API-level cache being enabled but then allows you to enable the middleware for the specific endpoints that you wish to cache. No other endpoint requests will be cached.
 
-For each endpoint in your API that you enable the endpoint caching middleware, you can configure which response codes should be cached (for example, you might not want to cache error responses) and also the refresh interval - or timeout - for the cache entries.
+For each endpoint in your API with endpoint caching middleware enabled, you can configure which response codes should be cached (for example, you might not want to cache error responses) and also the refresh interval - or timeout - for the cache entries.
 
 {{< note success >}}
 **Note** 
