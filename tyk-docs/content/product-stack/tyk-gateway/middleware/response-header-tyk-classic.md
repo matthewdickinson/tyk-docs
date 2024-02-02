@@ -17,7 +17,7 @@ There are two options for this:
 If both API-level and endpoint-level middleware are configured, the endpoint-level transformation will be applied first.
 {{< /note >}}
 
-When working with Tyk Classic APIs the transformation is configured in the Tyk Classic API Definition; this can be done manually within the `.json` file or from the API Designer in the Tyk Dashboard.
+When working with Tyk Classic APIs the transformation is configured in the Tyk Classic API Definition. You can do this via the Tyk Dashboard API or in the API Designer.
 
 If you want to use dynamic data from context variables, you must [enable]({{< ref "context-variables#enabling-context-variables-for-use-with-tyk-classic-apis" >}}) context variables for the API to be able to access them from the response header transform middleware.
 
