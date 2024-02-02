@@ -45,10 +45,6 @@ menu:
           path: /tyk-oss/ce-helm-chart-new
           category: Page
           show: True
-        - title: "Legacy Tyk OSS Helm Chart"
-          path: /tyk-oss/ce-helm-chart
-          category: Page
-          show: True
         - title: "Ansible"
           path: /tyk-oss/ce-ansible
           category: Page
@@ -79,6 +75,10 @@ menu:
           show: True
         - title: "Via GitHub"
           path: /tyk-oss/ce-github
+          category: Page
+          show: True
+        - title: "Legacy Tyk Headless Helm Chart"
+          path: /tyk-oss/ce-helm-chart
           category: Page
           show: True
       - title: "Open source operations tooling"
