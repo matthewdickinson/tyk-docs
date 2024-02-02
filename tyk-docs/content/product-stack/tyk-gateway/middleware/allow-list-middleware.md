@@ -15,11 +15,15 @@ Note that this is not the same as Tyk's [IP allow list]({{< ref "tyk-apis/tyk-ga
 If you have a service that exposes endpoints or supports methods that you do not want to be available to clients, you should use the allow list to perform strict restriction to a subset of methods and paths. If the allow list is not enabled, requests to endpoints that are not explicitly defined in Tyk will be proxied to the upstream service and may lead to unexpected behaviour.
 
 ## How the allow list works
-Tyk Gateway does not actually maintain a list of allowed endpoints but rather works on the model whereby if the _allow list_ middleware is added to an endpoint then this will automatically enable a blanket block to all other endpoints.
+Tyk Gateway does not actually maintain a list of allowed endpoints but rather works on the model whereby if the _allow list_ middleware is added to an endpoint then this will automatically block all other endpoints.
 
 Tyk Gateway will subsequently return `HTTP 403 Forbidden` to any requested endpoint that doesn't have the _allow list_ middleware enabled, even if the endpoint is defined and configured in the API definition.
 
-It is important, therefore, to ensure that if you enable the allow list feature by adding the middleware to any endpoint that you also add the middleware to any other endpoint to which you wish to accept requests.
+{{< warning success >}}
+**Warning**  
+
+If you enable the allow list feature by adding the middleware to any endpoint, ensure that you also add the middleware to any other endpoint for which you wish to accept requests.
+{{< /warning >}}
 
 #### Case sensitivity
 By default the allow list is case-sensitive, so for example if you have defined the endpoint `/getuser` in your API definition then only calls to `/getuser` will be allowed: calls to `getUser` or `GetUser` will be rejected. You can configure the middleware to be case insensitive at the endpoint level.

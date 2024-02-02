@@ -12,13 +12,13 @@ Note that this is not the same as Tyk's [IP block list]({{< ref "tyk-apis/tyk-ga
 
 ## When to use the block list
 #### Prevent access to deprecated resources
-If you are versioning your API are deprecating an endpoint then, instead of having to remove the functionality from your upstream service's API you can simply block access to it using the block list middleware.
+If you are versioning your API and deprecating an endpoint then, instead of having to remove the functionality from your upstream service's API you can simply block access to it using the block list middleware.
 
 ## How the block list works
 Tyk Gateway does not actually maintain a list of blocked endpoints but rather works on the model whereby if the _block list_ middleware is added to an endpoint then any request to that endpoint will be rejected, returning `HTTP 403 Forbidden`.
 
 #### Case sensitivity
-By default the block list is case-sensitive, so for example if you have defined the endpoint `/getuser` in your API definition then only calls to `/getuser` will be blocked: calls to `getUser` or `GetUser` will be allowed. You can configure the middleware to be case insensitive at the endpoint level.
+By default the block list is case-sensitive. For example, if you have defined the endpoint `/getuser` in your API definition then only calls to `/getuser` will be blocked: calls to `getUser` or `GetUser` will be allowed. You can configure the middleware to be case insensitive at the endpoint level.
 
 You can also set case sensitivity for the entire [gateway]({{< ref "tyk-oss-gateway/configuration#ignore_endpoint_case" >}}) in the Gateway configuration file `tyk.conf`. If case insensitivity is configured at the gateway level, this will override the endpoint-level setting.
 

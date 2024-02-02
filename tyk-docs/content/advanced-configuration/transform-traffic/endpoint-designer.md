@@ -50,7 +50,7 @@ Here's an example to illustrate its impact: When you define an `/anything` endpo
 ### Allow list
 The [Allow List]({{< ref "product-stack/tyk-gateway/middleware/allow-list-middleware" >}}) middleware is a feature designed to restrict access to only specific API endpoints. It rejects requests to endpoints not specifically "allowed", returning `HTTP 403 Forbidden`. This enhances the security of the API by preventing unauthorised access to endpoints that are not explicitly permitted.
 
-Adding an endpoint to the allow list will cause the entire API to become blocked except for endpoints on the allow list. Any non-specified routes will be blocked, and only those with the _allow list_ middleware in the Endpoint Designer will be allowed through. This is great if you wish to have very select access rules for your services.
+Adding an endpoint to the allow list will cause the entire API to become blocked except for endpoints on the allow list. Any non-specified routes will be blocked, and only those with the _allow list_ middleware in the Endpoint Designer will be allowed through. This is great if you wish to have very strict access rules for your services, limiting access to specific published endpoints.
 
 ### Blocklist
 The [Block List]({{< ref "product-stack/tyk-gateway/middleware/block-list-middleware" >}})  middleware is a feature designed to block access to specific API endpoints. Tyk Gateway rejects all requests made to endpoints with the block list enabled, returning `HTTP 403 Forbidden`. 
