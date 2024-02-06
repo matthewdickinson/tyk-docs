@@ -12,6 +12,4 @@ aliases:
 
 [Helm](https://helm.sh/) is a CLI solution for managing Kubernetes applications.
 
-If you chose to use Helm, you can use Tyk Stack helm chart to manage installs of all Tyk Dashboard, Gateway, Tyk Pump, and Tyk Enterprise Portal.
-
-See [Tyk Stack Chart]({{<ref "product-stack/tyk-charts/tyk-stack-chart">}}) for detail installation instructions.
+If you chose to use Helm, you can use the [Tyk Stack helm chart]({{<ref "product-stack/tyk-charts/tyk-stack-chart">}}) to manage installs of all Tyk Dashboard, Gateway, Tyk Pump, and Tyk Enterprise Portal.

@@ -14,7 +14,7 @@ weight: 1
 
 `tyk-headless` chart is deprecated. Please use our Tyk Chart for Tyk open source at [tyk-oss]({{<ref "/tyk-oss/ce-helm-chart-new">}}) instead. 
 
-We recommend all users to migrate to `tyk-oss` Chart. Please review the [Configuration]({{<ref "/tyk-oss/ce-helm-chart-new">}}) section of the new helm chart and cross-check with your existing configurations while planning for migration. 
+We recommend all users migrate to the `tyk-oss` Chart. Please review the [Configuration]({{<ref "/tyk-oss/ce-helm-chart-new">}}) section of the new helm chart and cross-check with your existing configurations while planning for migration. 
 {{< /warning >}}
 
 ## Introduction

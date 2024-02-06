@@ -13,6 +13,4 @@ weight: 1
 
 [Helm](https://helm.sh/) is a CLI solution for managing Kubernetes applications.
 
-If you chose to use Helm, you can use Tyk Open Source helm chart to manage installs of the Tyk Gateway and Tyk Pump.
-
-See [Tyk OSS Chart]({{<ref "product-stack/tyk-charts/tyk-oss-chart">}}) for detail installation instructions.
+If you chose to use Helm, you can use [Tyk Open Source helm chart]({{<ref "product-stack/tyk-charts/tyk-oss-chart">}}) to manage installs of the Tyk Gateway and Tyk Pump.
