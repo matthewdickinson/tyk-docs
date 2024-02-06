@@ -6,27 +6,24 @@ should add additional sections to their release notes.
 -->
 
 ---
-title: Tyk <Dashboard|Gateway|Pump|etc.> <X.Y> Release Notes
-date: 2023-09-27T15:49:11Z
-description: "Release notes documenting updates, enhancements and changes for Tyk <Dashboard/Gateway/Pump> versions within the <X.Y.Z> series."
-tags: ["Tyk Dashboard", "Release notes", "changelog", "vX.Y", "X.Y.0", "X.Y", "X.Y.Z"]
+title: Tyk Charts 1.3 Release Notes
+date: 2024-02-05T15:49:11Z
+description: "Release notes documenting updates, enhancements and changes for Tyk Charts versions within the 1.3 series."
+tags: ["Tyk Charts", "Release notes", "changelog", "v1.3" ]
 ---
 
-<!-- Required. oss or licensed. Choose one of the following:
-    **Licensed Protected Product**
-    Or
-    ****Open Source** ([Mozilla Public License](https://github.com/TykTechnologies/tyk/blob/master/LICENSE.md))**
--->
+****Open Source** ([Mozilla Public License](https://github.com/TykTechnologies/tyk/blob/master/LICENSE.md))**
 
-**This page contains all release notes for version 5.2.X displayed in a reverse chronological order**
+
+**This page contains all release notes for version 1.3.X displayed in a reverse chronological order**
 
 ### Support Lifetime
 <!-- Required. replace X.Y with this release and set the correct quarter of the year -->
-Our minor releases are supported until our next minor comes out. This would be <vX.Y+1> scheduled in Q<1-4> if this goes ahead as planned. If not, X.Y will remain in support until our next LTS version comes out in March 2024.
+Our minor releases are supported until our next minor comes out. 
 
 ---
 
-## X.Y.Z Release Notes
+## 1.3.0 Release Notes
 
 ##### Release Date DD Mon YYYY <<update>>
 

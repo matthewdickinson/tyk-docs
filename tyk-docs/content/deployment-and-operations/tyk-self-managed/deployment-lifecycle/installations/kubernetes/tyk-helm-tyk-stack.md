@@ -14,4 +14,4 @@ aliases:
 
 If you chose to use Helm, you can use Tyk Stack helm chart to manage installs of all Tyk Dashboard, Gateway, Tyk Pump, and Tyk Enterprise Portal.
 
-See [Tyk Stack Chart]{{<ref "/product-stack/tyk-charts/tyk-stack-chart">}} for detail installation instructions.
+See [Tyk Stack Chart]({{<ref "product-stack/tyk-charts/tyk-stack-chart">}}) for detail installation instructions.

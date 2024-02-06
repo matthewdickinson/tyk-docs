@@ -163,4 +163,4 @@ Content-Length: 59
 
 If you chose to use Helm, you can use Tyk Data Plane helm chart to manage installs of the hybrid gateways and Tyk Pump.
 
-See [Tyk Data Plane Chart]{{<ref "/product-stack/tyk-charts/tyk-data-plane-chart">}} for detail installation instructions.
+See [Tyk Data Plane Chart]({{<ref "product-stack/tyk-charts/tyk-data-plane-chart">}}) for detail installation instructions.
