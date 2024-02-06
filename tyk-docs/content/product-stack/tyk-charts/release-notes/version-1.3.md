@@ -1,10 +1,3 @@
-<!--
-
-This is a Markdown template that serves to provide guidance for compiling consistently structured release notes.
-For each specific release if there is additional miscellaneous information or announcements that will be helpful to the customer then squads
-should add additional sections to their release notes.
--->
-
 ---
 title: Tyk Charts 1.3 Release Notes
 date: 2024-02-05T15:49:11Z
@@ -39,18 +32,23 @@ We try to avoid making changes to our log messages, especially at error and crit
 
 <!-- The following "|Planned Breaking Changes" section is optional!
 Announce future scheduled breaking changes, e.g. Go version updates, DB driver updates etc. -->
-<!-- #### Planned Breaking Changes -->
+#### Planned Breaking Changes
+`.Values.dashboard.hashKeys` in `tyk-dashboard` chart will be deprecated in future release. 
+Please use `.Values.global.hashKeys` field to configure [Key Hashing]({{<ref "basic-config-and-security/security/key-hashing">}}) for Gateway, Dashboard, and MDCB.
 
+<!--
 #### Dependencies
-<!--Required. Use this section to announce the following types of dependencies compatible with the release:
+Required. Use this section to announce the following types of dependencies compatible with the release:
 
 Version compatibility with other components in the Tyk stack. This takes the form of a compatibility matrix and is only required for Gateway and Portal.
 
-3rd party dependencies and tools -->
+3rd party dependencies and tools 
+-->
 
+<!-- 
 ##### Compatibility Matrix For Tyk Components
-<!-- Required. Version compatibility with other components in the Tyk stack. This takes the form of a compatibility matrix and is only required for Gateway and Portal.
-An illustrative example is shown below. -->
+Required. Version compatibility with other components in the Tyk stack. This takes the form of a compatibility matrix and is only required for Gateway and Portal.
+An illustrative example is shown below. 
 | Gateway Version | Recommended Compatibility | Backwards Compatibility |
 |----    |---- |---- |
 | 5.3 LTS | Helm v2.2     | Helm vX - vY |
@@ -60,6 +58,7 @@ An illustrative example is shown below. -->
 | | | EDP vX - vY |
 | | | Pump vX - vY |
 | | | TIB vX - vY |
+-->
 
 #### 3rd Party Dependencies & Tools
 <!-- Required. Third-party dependencies encompass tools (GoLang, Helm etc.), databases (PostgreSQL, MongoDB etc.) and external software libraries. This section should be a table that presents the third-party dependencies and tools compatible with the release. Compatible is used in the sense of those versions tested with the releases. Such information assists customers considering upgrading to a specific release.
@@ -70,10 +69,11 @@ An example is given below for illustrative purposes only. Tested Versions and Co
 
 | Third Party Dependency                                     | Tested Versions        | Compatible Versions    | Comments | 
 | ---------------------------------------------------------- | ---------------------- | ---------------------- | -------- | 
-| [GoLang](https://go.dev/dl/)                               | 1.19, 1.20, 1.21       | 1.19, 1.20, 1.21       | All our binaries| 
+| [Kubernetes](https://kubernetes.io)                        | 1.26.x, 1.27.x, 1.28.x, 1.29.x | 1.19+          |          | 
+| [Helm](https://helm.sh)                                    | 3.14.x                 | 3.x                    |          | 
+| [Redis](https://redis.io)                                  | 6.0.x, 6.2.x, 7.0.x    | 6.0.x, 6.2.x, 7.0.x    | Used by Tyk Gateway and Dashboard | 
 | [MongoDB](https://www.mongodb.com/try/download/community)  | 4.4.x, 5.0.x and 6.0.x | 4.4.x, 5.0.x and 6.0.x | Used by Tyk Dashboard | 
 | [PostgreSQL](https://www.postgresql.org/download/)         | 11.x - 15.x LTS        | 11.x - 15.x            | Used by Tyk Dashboard | 
-| OpenAPI JSON Schema  | v3.0.0...      | v3.0.0...          | Used by [Tyk OAS API definition](https://swagger.io/specification/)                | [3.0.3](https://spec.openapis.org/oas/v3.0.3)|
 
 Given the time difference between your upgrade and the release of this version, we recommend customers verify the ongoing support of third-party dependencies they install, as their status may have changed since the release.
 
@@ -93,6 +93,13 @@ For users currently on vX.Y.Z, we strongly recommend promptly upgrading to the l
 <br/>
 Go to the [Upgrading Tyk](#upgrading-tyk) section for detailed upgrade Instructions.
 -->
+You can use helm upgrade to upgrade your release
+
+```bash
+helm repo add tyk-helm https://helm.tyk.io/public/helm/charts/
+helm repo update
+helm upgrade [RELEASE_NAME] tyk-helm/[CHART_NAME]
+```
 
 #### Release Highlights
 <!-- Required. Use similar ToV to previous release notes. For example for a patch release:
@@ -106,11 +113,9 @@ Topic in The Release Highlights
 Topic in The Release Highlights
 
 #### Downloads
-- <<[docker image to pull](https://hub.docker.com/layers/tykio/tyk-dashboard/vX.Y.Z/images/blabla)>>
-- <<Helm charts links>>
-- <<source code tarball for oss projects>>
+- [Source code](https://github.com/TykTechnologies/tyk-charts/archive/refs/tags/v1.3.0.tar.gz)
 
-#### Changelog {#Changelog-vX.Y.Z}
+#### Changelog {#Changelog-v1.3.0}
 <!-- Required. The change log should include the following ordered set of sections below that briefly summarise the features, updates and fixed issues of the release.
 
 Here it is important to explain the benefit of each changelog item. As mentioned by James in a previous Slack message (https://tyktech.slack.com/archives/C044R3ZTN6L/p1686812207060839?thread_ts=1686762128.651249&cid=C044R3ZTN6L):
