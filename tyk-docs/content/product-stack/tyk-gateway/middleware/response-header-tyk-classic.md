@@ -30,8 +30,12 @@ The API-level and endpoint-level response header transforms have a common config
 **Note**  
 Prior to Tyk 5.3.0, there was an additional step to enable response header transforms (both API-level and endpoint-level). You would need to add the following to the Tyk Classic API definition:
 
-```
-"response_processors":[{"name": "header_injector"}]
+``` .json
+{
+    "response_processors":[
+        {"name": "header_injector"}
+    ]
+}
 ```
 
 If using the Endpoint Designer in the Tyk Dashboard, this would be added automatically.
@@ -106,6 +110,35 @@ If the example [API-level]({{< ref "product-stack/tyk-gateway/middleware/respons
  - `X-User-ID`
  - `X-Static`
  - `X-New`
+
+### Fixing response headers that leak upstream server data
+A middleware called `header_transform` was added in Tyk 2.1 specfically to allow you to  ensure that headers such as `Location` and `Link` reflect the outward facade of your API Gateway and also align with the expected response location to be terminated at the gateway, not the hidden upstream proxy.
+
+This is configured by adding a new `rev_proxy_header_cleanup` object to the `response_processors` section of your API definition.
+
+It has the following configuration:
+ - `headers`: a list of headers in the response that should be modified
+ - `target_host`: the value to which the listed headers should be updated
+ 
+For example:
+``` .json
+{
+    "response_processors": [
+        {
+            "name": "header_transform",
+            "options": {
+                "rev_proxy_header_cleanup": {
+                    "headers": ["Link", "Location"],
+                    "target_host": "http://TykHost:TykPort"
+                }
+            }
+        }
+    ]
+}
+
+In this example, the `Link` and `Location` headers will be modified from the server-generated response, with the protocol, domain and port of the value set in `target_host`.
+
+This is not an often used feature of Tyk and has not been implemented in the Tyk Dashboard UI, nor in the [Tyk OAS API]({{< ref "product-stack/tyk-gateway/middleware/response-header-tyk-oas" >}}).
 
 ## Configuring the Response Header Transform in the API Designer
 You can use the API Designer in the Tyk Dashboard to configure the response header transform middleware for your Tyk Classic API by following these steps.
