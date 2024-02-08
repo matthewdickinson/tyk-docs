@@ -30,7 +30,7 @@ The API-level and endpoint-level response header transforms have a common config
 **Note**  
 Prior to Tyk 5.3.0, there was an additional step to enable response header transforms (both API-level and endpoint-level). You would need to add the following to the Tyk Classic API definition:
 
-``` .json
+```json
 {
     "response_processors":[
         {"name": "header_injector"}
@@ -121,7 +121,7 @@ It has the following configuration:
  - `target_host`: the value to which the listed headers should be updated
  
 For example:
-``` .json
+```json
 {
     "response_processors": [
         {
@@ -135,6 +135,7 @@ For example:
         }
     ]
 }
+```
 
 In this example, the `Link` and `Location` headers will be modified from the server-generated response, with the protocol, domain and port of the value set in `target_host`.
 
