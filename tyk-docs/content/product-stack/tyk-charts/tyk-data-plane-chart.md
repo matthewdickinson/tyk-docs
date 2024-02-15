@@ -56,7 +56,7 @@ To install the chart from the Helm repository in namespace `tyk` with the releas
     helm show values tyk-helm/tyk-data-plane > values.yaml
 ```
 
-See [Configuration](#configuration) section for the available config options and modify your local `values.yaml` file accordingly. Then install the chart:
+Consult the [Configuration](#configuration) section for the available configuration options and modify your local `values.yaml` file accordingly. Then install the chart by issuing the following command below:
 
 ```bash
     helm install tyk-data-plane tyk-helm/tyk-data-plane -n tyk --create-namespace -f values.yaml
