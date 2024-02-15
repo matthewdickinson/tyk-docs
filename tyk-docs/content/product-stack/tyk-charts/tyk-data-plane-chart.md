@@ -78,7 +78,7 @@ helm upgrade tyk-data-plane tyk-helm/tyk-data-plane -n tyk
 
 ## Configuration
 
-To get all configurable options with detailed comments:
+To list all configurable options with detailed comments, issue the following command:
 
 ```bash
 helm show values tyk-helm/tyk-data-plane > values.yaml
