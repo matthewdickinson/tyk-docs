@@ -12,4 +12,9 @@ aliases:
 
 [Helm](https://helm.sh/) is a CLI solution for managing Kubernetes applications.
 
-If you chose to use Helm, you can use the [Tyk Stack helm chart]({{<ref "product-stack/tyk-charts/tyk-stack-chart">}}) to manage installs of all Tyk Dashboard, Gateway, Tyk Pump, and Tyk Enterprise Portal.
+Get started with one of our quick start guides:
+
+- [Quick Start with PostgreSQL]({{<ref "/deployment-and-operations/tyk-self-managed/deployment-lifecycle/installations/kubernetes/tyk-helm-tyk-stack-postgresql">}})
+- [Quick Start with MongoDB]({{<ref "/deployment-and-operations/tyk-self-managed/deployment-lifecycle/installations/kubernetes/tyk-helm-tyk-stack-mongodb">}})
+
+Or go to [Tyk Stack helm chart]({{<ref "product-stack/tyk-charts/tyk-stack-chart">}}) for detailed installation instructions and configuration options.

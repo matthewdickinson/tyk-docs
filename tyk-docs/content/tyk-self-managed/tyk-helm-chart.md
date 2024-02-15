@@ -1,5 +1,5 @@
 ---
-title: "Tyk Helm Chart "
+title: "Legacy Tyk Pro Helm Chart "
 date: 2021-07-01
 tags: [""]
 description: ""
@@ -8,6 +8,14 @@ menu:
     parent: "Kubernetes "
 weight: 1
 ---
+
+{{< warning success >}}
+**Warning**
+
+`tyk-pro` chart is deprecated. Please use our [Tyk Stack helm chart]({{<ref "/product-stack/tyk-charts/tyk-stack-chart">}}) instead. 
+
+We recommend all users migrate to the `tyk-stack` Chart. Please review the [Configuration]({{<ref "/product-stack/tyk-charts/tyk-stack-chart">}}) section of the new helm chart and cross-check with your existing configurations while planning for migration. 
+{{< /warning >}}
 
 ## Introduction
 

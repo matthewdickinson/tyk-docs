@@ -41,24 +41,32 @@ menu:
           path: /tyk-oss/ce-docker
           category: Page
           show: True
-        - title: "Tyk OSS Helm Chart"
-          path: /tyk-oss/ce-helm-chart-new
-          category: Page
+        - title: "Kubernetes"
+          category: Directory
           show: True
+          menu:
+          - title: "Overview"
+            path: /tyk-oss/ce-kubernetes
+            category: Page
+            show: True
+          - title: "Quick Start with Tyk OSS Helm Chart"
+            path: /tyk-oss/ce-helm-chart-new
+            category: Page
+            show: True
+          - title: "Ingress Controller with Tyk Operator"
+            path: /tyk-oss/ce-kubernetes-ingress
+            category: Page
+            show: True
+          - title: "Legacy Tyk Headless Helm Chart"
+            path: /tyk-oss/ce-helm-chart
+            category: Page
+            show: True
         - title: "Ansible"
           path: /tyk-oss/ce-ansible
           category: Page
           show: True
         - title: "Debian / Ubuntu"
           path: /tyk-oss/ce-debian-ubuntu
-          category: Page
-          show: True
-        - title: "Ingress Controller with Tyk Operator"
-          path: /tyk-oss/ce-kubernetes-ingress
-          category: Page
-          show: True
-        - title: "Kubernetes"
-          path: /tyk-oss/ce-kubernetes
           category: Page
           show: True
         - title: "Red Hat (RHEL / CentOS)"
@@ -75,10 +83,6 @@ menu:
           show: True
         - title: "Via GitHub"
           path: /tyk-oss/ce-github
-          category: Page
-          show: True
-        - title: "Legacy Tyk Headless Helm Chart"
-          path: /tyk-oss/ce-helm-chart
           category: Page
           show: True
       - title: "Open source operations tooling"
@@ -231,7 +235,7 @@ menu:
             path: /tyk-cloud/using-custom-domains
             category: Page
             show: True
-          - title: "Deploy legacy hybrid gateways"
+          - title: "Deploy hybrid gateways using legacy helm chart"
             path: /tyk-cloud/environments-deployments/hybrid-gateways-helm
             category: Page
             show: True
@@ -430,6 +434,14 @@ menu:
               show: True
             - title: "Tyk Stack Helm chart"
               path: /deployment-and-operations/tyk-self-managed/deployment-lifecycle/installations/kubernetes/tyk-helm-tyk-stack
+              category: Page
+              show: False
+            - title: "Quick Start with Helm Chart and PostgreSQL"
+              path: /deployment-and-operations/tyk-self-managed/deployment-lifecycle/installations/kubernetes/tyk-helm-tyk-stack-postgresql
+              category: Page
+              show: True
+            - title: "Quick Start with Helm Chart and MongoDB"
+              path: /deployment-and-operations/tyk-self-managed/deployment-lifecycle/installations/kubernetes/tyk-helm-tyk-stack-mongodb
               category: Page
               show: True
             - title: "Ingress Controller with Tyk Operator"
@@ -3477,7 +3489,7 @@ menu:
           path: /tyk-configuration-reference/tyk-identity-broker-configuration
           category: Page
           show: True
-    - title: "Tyk Charts (Open Source)"
+    - title: "Tyk Helm Charts (Open Source)"
       category: Directory
       show: True
       menu:

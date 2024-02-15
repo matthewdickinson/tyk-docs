@@ -155,12 +155,78 @@ Content-Length: 59
 {"status":"pass","version":"4.3.3","description":"Tyk GW"}
 ```
 
-## Deploy in Kubernetes with Helm
+## Deploy in Kubernetes with Helm Chart
+### Prerequisites
 
-## Introduction
+* [Kubernetes 1.19+](https://kubernetes.io/docs/setup/)
+* [Helm 3+](https://helm.sh/docs/intro/install/)
+* Connection details to remote control plane from the above [section](#create-hybrid-data-plane-configuration).
 
-[Helm](https://helm.sh/) is a CLI solution for managing Kubernetes applications.
+The following quick start guide explains how to use the Tyk Data Plane Helm chart to configure Tyk Gateway that includes:
+- Redis for key storage
+- Tyk Pump to send analytics to Tyk Cloud and Prometheus
 
-If you chose to use Helm, you can use Tyk Data Plane helm chart to manage installs of the hybrid gateways and Tyk Pump.
+At the end of this quickstart Tyk Gateway should be accessible through service `gateway-svc-hybrid-dp-tyk-gateway` at port `8080`. Pump is also configured with Hybrid Pump which sends aggregated analytics to Tyk Cloud, and Prometheus Pump which expose metrics locally at `:9090/metrics`.
 
-See [Tyk Data Plane Chart]({{<ref "product-stack/tyk-charts/tyk-data-plane-chart">}}) for detail installation instructions.
+### 1. Set connection details
+
+Set the below environment variables and replace values with connection details to your Tyk Cloud remote control plane. See the above [section](#create-hybrid-data-plane-configuration) on how to get the connection details.
+
+```bash
+MDCB_UserKey=9d20907430e440655f15b851e4112345
+MDCB_OrgId=64cadf60173be90001712345
+MDCB_ConnString=mere-xxxxxxx-hyb.aws-euw2.cloud-ara.tyk.io:443
+MDCB_GroupId=your-group-id
+```
+
+### 2. Then use Helm to install Redis and Tyk
+
+```bash
+NAMESPACE=tyk
+APISecret=foo
+
+helm repo add tyk-helm https://helm.tyk.io/public/helm/charts/
+helm repo update
+
+helm upgrade tyk-redis oci://registry-1.docker.io/bitnamicharts/redis -n $NAMESPACE --create-namespace --install
+
+helm upgrade hybrid-dp tyk-helm/tyk-data-plane -n $NAMESPACE --create-namespace \
+  --install \
+  --set global.remoteControlPlane.userApiKey=$MDCB_UserKey \
+  --set global.remoteControlPlane.orgId=$MDCB_OrgId \
+  --set global.remoteControlPlane.connectionString=$MDCB_ConnString \
+  --set global.remoteControlPlane.groupID=$MDCB_GroupId \
+  --set global.secrets.APISecret="$APISecret" \
+  --set global.redis.addrs="{tyk-redis-master.$NAMESPACE.svc.cluster.local:6379}" \
+  --set global.redis.passSecret.name=tyk-redis \
+  --set global.redis.passSecret.keyName=redis-password
+```
+
+### 3. Done!
+
+Now Tyk Gateway should be accessible through service `gateway-svc-hybrid-dp-tyk-gateway` at port `8080`. Pump is also configured with Hybrid Pump which sends aggregated analytics to Tyk Cloud, and Prometheus Pump which expose metrics locally at `:9090/metrics`.
+
+For the complete installation guide and configuration options, please see [Tyk Data Plane Chart]({{<ref "product-stack/tyk-charts/tyk-data-plane-chart">}}).
+
+
+## Remove hybrid data plane configuration
+{{< warning success >}}
+**Warning**
+
+Please note the action of removing a hybrid data plane configuration cannot be undone.
+
+To remove the hybrid data plane configuration, navigate to the page of the hybrid data plane you want to remove and click _OPEN DETAILS_
+
+{{< /warning >}}
+
+
+  {{< img src="/img/hybrid-gateway/tyk-cloud-hybrid-open-details.png" alt="Tyk Cloud hybrid open for details" >}}
+
+Then click on _REMOVE DATA PLANE CONFIGS_
+
+  {{< img src="/img/hybrid-gateway/tyk-cloud-hybrid-remove-configs.png" alt="Tyk Cloud hybrid remove configs" >}}
+
+Confirm the removal by clicking _DELETE HYBRID DATA PLANE_
+
+  {{< img src="/img/hybrid-gateway/tyk-cloud-hybrid-confirm-config-removal.png" alt="Tyk Cloud hybrid confirm removal of configs" >}}
+
