@@ -184,7 +184,7 @@ where `foo-secret` should contain `orgId`, `userApiKey` and `groupID` keys in it
 
 ***Redis Password***
 
-Redis password can also be provided via a secret. Store Redis password in Kubernetes secret and refer to this secret
+The Redis password can also be provided via a secret. Store Redis password in Kubernetes secret and refer to this secret
 via `global.redis.passSecret.name` and `global.redis.passSecret.keyName` field, as follows:
 
 ```yaml
