@@ -19,6 +19,8 @@ To enable or disable each component, change the corresponding enabled flag.
 
 Also, you can set the version of each component through `image.tag`. You could find the list of version tags available from [Docker hub](https://hub.docker.com/u/tykio).
 
+For quick start guide, please see [Quick Start with Tyk OSS Helm Chart]({{<ref "/tyk-oss/ce-helm-chart-new">}}).
+
 ## Prerequisites
 
 * [Kubernetes 1.19+](https://kubernetes.io/docs/setup/)
