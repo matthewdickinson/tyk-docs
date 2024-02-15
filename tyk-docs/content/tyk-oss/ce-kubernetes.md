@@ -14,7 +14,7 @@ The main way to install the Open Source *Tyk Gateway* in a Kubernetes cluster is
 We are actively working to add flexibility and more user flows to our chart. Please reach out
 to our teams on support or the cummunity forum if you have questions, requests or suggestions for improvements.
 
-Get started with our [Quick Start guide]({{<ref "/tyk-oss/ce-helm-chart-new">}}) or go to [Tyk Open Source helm chart]({{<ref "product-stack/tyk-charts/tyk-oss-chart">}}) for detailed installation instructions and configuration options.
+Get started with our [Quick Start guide]({{<ref "tyk-oss/ce-helm-chart-new">}}) or go to [Tyk Open Source helm chart]({{<ref "product-stack/tyk-charts/tyk-oss-chart">}}) for detailed installation instructions and configuration options.
 
 
 ## Tyk Operator and Ingress
