@@ -48,7 +48,7 @@ You can easily obtain your remote control plane connection details on Tyk Cloud.
 ## Tyk Data Plane Chart Installations
 ### Installing the Chart
 
-To install the chart from the Helm repository in namespace `tyk` with the release name `tyk-data-plane`:
+To install the chart from the Helm repository in namespace `tyk` with the release name `tyk-data-plane`, issue the following commands:
 
 ```bash
     helm repo add tyk-helm https://helm.tyk.io/public/helm/charts/
