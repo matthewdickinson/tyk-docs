@@ -326,7 +326,7 @@ For further details for configuring Tyk Gateway, please consult the [Tyk Gateway
 
 ### Pump Configurations
 
-To enable Pump, set `global.components.pump` to true, and configure below inside `tyk-pump` section.
+To enable Pump, set `global.components.pump` to true, and configure as detailed below inside `tyk-pump` section.
 
 | Pump                      | Configuration                                                                                              |
 |---------------------------|------------------------------------------------------------------------------------------------------------| 
