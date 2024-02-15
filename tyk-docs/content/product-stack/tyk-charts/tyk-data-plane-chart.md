@@ -98,7 +98,7 @@ Set the following values after installing Redis:
 | `global.redis.addrs` | Redis addresses |
 | `global.redis.pass` | Redis password in plain text |
 | `global.redis.passSecret.name` | If global.redis.pass is not provided, you can store it in a secret and provide the secret name here |
-| `global.redis.passSecret.keyName` | key name to retrieve redis password from the secret |
+| `global.redis.passSecret.keyName` | key name to retrieve Redis password from the secret |
 
 ***Recommended: via *Bitnami* chart***
 
