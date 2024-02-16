@@ -52,6 +52,8 @@ To install the chart from the Helm repository in namespace `tyk` with the releas
     helm show values tyk-helm/tyk-data-plane > values.yaml
 ```
 
+For further documentation relating to *helm* command usage, please refer to the [helm docs](https://helm.sh/docs/helm/).
+
 See [Configuration](#configuration) section for the available config options and modify your local `values.yaml` file accordingly. Then install the chart:
 
 ```bash
@@ -102,8 +104,14 @@ For Redis you can use these rather excellent charts provided by [Bitnami](https:
 Copy the following commands to add it:
 
 ```bash
-helm upgrade tyk-redis oci://registry-1.docker.io/bitnamicharts/redis -n tyk --create-namespace --install --set image.tag=6.2.13
+helm upgrade tyk-redis oci://registry-1.docker.io/bitnamicharts/redis -n tyk --create-namespace --install
 ```
+
+{{< note success >}}
+**Note**
+
+Please make sure you are installing Redis versions that are supported by Tyk. Please refer to Tyk docs to get list of [supported versions]({{< ref "planning-for-production/redis" >}}).
+{{< /note >}}
 
 Follow the notes from the installation output to get connection details and password.
 
