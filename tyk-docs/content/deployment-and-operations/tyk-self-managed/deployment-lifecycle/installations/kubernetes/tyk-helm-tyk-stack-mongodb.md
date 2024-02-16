@@ -112,6 +112,6 @@ helm upgrade tyk tyk-helm/tyk-stack -n $NAMESPACE \
 
 Now Tyk Dashboard should be accessible through service `dashboard-svc-tyk-tyk-dashboard` at port `3000`. You can login to Dashboard using the admin email and password to start managing APIs. Tyk Gateway will be accessible through service `gateway-svc-tyk-tyk-gateway.tyk.svc` at port `8080`.
 
-You are now ready to [create an API]({{<ref "/getting-started/create-api">}}).
+You are now ready to [create an API]({{<ref "getting-started/create-api">}}).
 
-For the complete installation guide and configuration options, please see [Tyk Stack Helm Chart]({{<ref "/product-stack/tyk-charts/tyk-stack-chart">}}).
+For the complete installation guide and configuration options, please see [Tyk Stack Helm Chart]({{<ref "product-stack/tyk-charts/tyk-stack-chart">}}).
