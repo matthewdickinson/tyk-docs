@@ -22,7 +22,7 @@ Our minor releases are supported until our next minor comes out.
 
 #### Breaking Changes
 <!-- Required. Use the following statement if there are no breaking changes, or explain if there are -->
-This release has no breaking changes.
+For MongoDB users: Tyk Charts 1.3.0 uses `mongo-go` as the default driver to connect to MongoDB. `mongo-go` driver is compatible with MongoDB 4.4.x and above. For MongoDB versions prior to 4.4, please set `global.mongo.driver` to `mgo`. We recommend reading [Choose a MongoDB driver]({{<ref "/planning-for-production/database-settings/mongodb#choose-a-mongodb-driver">}}) when you need to change driver setting.
 
 <!-- The following "Changed error log messages" section is Optional!
 Instructions: We should mention in the changelog section ALL changes in our application log messages. In case we made such changes, this section should also be added, to make sure the users don't miss this notice among other changelog lines. -->
@@ -31,10 +31,9 @@ Important for users who monitor Tyk components using the application logs (i.e. 
 We try to avoid making changes to our log messages, especially at error and critical levels. However, sometimes it's necessary. Please find the list of changes made to the application log in this release: -->
 
 <!-- The following "|Planned Breaking Changes" section is optional!
-Announce future scheduled breaking changes, e.g. Go version updates, DB driver updates etc. -->
+Announce future scheduled breaking changes, e.g. Go version updates, DB driver updates etc.
 #### Planned Breaking Changes
-`.Values.dashboard.hashKeys` in `tyk-dashboard` chart will be deprecated in future release. 
-Please use `.Values.global.hashKeys` field to configure [Key Hashing]({{<ref "basic-config-and-security/security/key-hashing">}}) for Gateway, Dashboard, and MDCB.
+ -->
 
 <!--
 #### Dependencies
@@ -84,8 +83,8 @@ There are no deprecations in this release.
 <!-- Optional section!
 Used to share and notify users about our plan to deprecate features, configs etc. 
 Once you put an item in this section, we must keep this item listed in all the following releases till the deprecation happens. -->
-<!-- ##### Future deprecations
--->
+##### Future deprecations
+TBC - TT-10903: update gateway and dashboard haskeys values (#208)
 
 #### Upgrade instructions
 <!-- Required. For patches release (Z>0) use this:
@@ -98,6 +97,7 @@ You can use helm upgrade to upgrade your release
 ```bash
 helm repo add tyk-helm https://helm.tyk.io/public/helm/charts/
 helm repo update
+
 helm upgrade [RELEASE_NAME] tyk-helm/[CHART_NAME]
 ```
 
@@ -131,21 +131,108 @@ Here it is important to explain the benefit of each changelog item. As mentioned
 - For OSS - Link to the corresponding issue if possible on GitHub to allow the users to see further info.
 
 Each change log item should be expandable. The first line summarises the changelog entry. It should be then possible to expand this to reveal further details about the changelog item. This is achieved using HTML as shown in the example below. -->
+
+<!--
+TT-10903: update gateway and dashboard haskeys values (#208)
+Beta - [TT-8519] MDCB Component Chart (#209)
+Beta - [TT-8522] Tyk Control Plane (#211)
+Beta - [TT-10898] - Add Tyk MDCB synchroniser in tyk-control-plane. (#216) 
+Beta - TT-10819: added support for TLS in mdcb (#219) 
+-->
+
 <ul>
+
 <li>
 <details>
-<summary>Changelog item summary</summary>
+<summary>Global config: Added OAS Validate Examples</summary>
 
-The actual changelog item text should go here. It should be no more than three or four sentences. It should link to a content page for further explanation where applicable. There should be a blank line between the summary tags and this paragraph, otherwise, links will not be rendered.
+Added field `global.oasValidateExamples`. When set to true, it enables validation of examples in the OAS spec. 
+It is used to set `TYK_DB_OAS_VALIDATE_EXAMPLES` and `TYK_GW_OAS_VALIDATE_EXAMPLES`.
 </details>
 </li>
+
 <li>
 <details>
-<summary>Another changelog item summary</summary>
+<summary>Global config: Added OAS Validate Schema Defaults</summary>
 
-The actual changelog item text should go here. It should be no more than three or four sentences. It should link to a content page for further explanation where applicable. There should be a blank line between the summary tags and this paragraph, otherwise, links will not be rendered.
+Added field `global.oasValidateSchemaDefaults`. When set to true, it enables validation of schema defaults in the OAS spec. 
+It is used to set `TYK_DB_OAS_VALIDATE_SCHEMA_DEFAULTS` and `TYK_GW_OAS_VALIDATE_SCHEMA_DEFAULTS`.
 </details>
 </li>
+
+<li>
+<details>
+<summary>Gateway: Enable Leaky Bucket Rate Limiter</summary>
+
+Added field `gateway.enableLeakyBucketRateLimiter`. When set to true, it enables leaky bucket rate limiting. 
+LeakyBucket will delay requests so they are processed in a FIFO style queue, ensuring a constant request rate and 
+smoothing out traffic spikes. This comes at some cost to gateway instances, as the connections would be held for a 
+longer time, instead of blocking the requests when they go over the defined rate limits.
+</details>
+</li>
+
+<li>
+<details>
+<summary>Gateway: Added support for PodDisruptionBudget resource</summary>
+
+Added built-in support for [PodDisruptionBudget](https://kubernetes.io/docs/tasks/run-application/configure-pdb/) resource for Tyk Gateway. 
+To enable it, set `gateway.pdb.enabled` to `true` and configure `gateway.pdb.minAvailable` and `gateway.pdb.maxUnavailable`.
+</details>
+</li>
+
+<li>
+<details>
+<summary>Gateway: Added Ingress template for gateway control service</summary>
+
+When enabled at `gateway.control.ingress.enabled`, an Ingress resource will be created to allow external access to gateway's [control service]({{<ref "/planning-for-production#change-your-control-port">}}).
+</details>
+</li>
+
+<li>
+<details>
+<summary>Gateway: Configure Gateway to work with MDCB synchroniser</summary>
+
+Allow users to configure worker gateway to work with [Tyk MDCB synchroniser]({{<ref "/product-stack/tyk-enterprise-mdcb/advanced-configurations/synchroniser">}}) easily by setting `global.mdcbSynchronizer.enabled` in `tyk-data-plane`. 
+The control plane should be deployed with same `global.mdcbSynchronizer.enabled` value too.
+</details>
+</li>
+
+<li>
+<details>
+<summary>Dashboard: Added option to enable Tyk Identity Broker (TIB) in Tyk Dashboard</summary>
+
+You can enable Internal [Tyk Identity Broker (TIB)]({{<ref "tyk-identity-broker">}}) in Tyk Dashboard by field `tyk-dashboard.tib.enabled` to `true`.
+</details>
+</li>
+
+<li>
+<details>
+<summary>Pump: Added Graph pump support</summary>
+
+[Graph Pumps]({{<ref "/tyk-stack/tyk-pump/tyk-pump-configuration/graph-pump">}}) will be added when user add `mongo` or `postgres` to `pump.backend`. When user add `mongo` to `pump.backend`, Graph MongoDB Pump will be enabled. When user add `postgres` to `pump.backend`, Graph SQL Pump and Graph SQL Aggregate Pump will be enabled.
+</details>
+</li>
+
+<li>
+<details>
+<summary>New component chart to deploy MDCB</summary>
+
+A new [MDCB component chart](https://github.com/TykTechnologies/tyk-charts/tree/main/components/tyk-mdcb) to is added. 
+It is currently in Beta. For installation instructions and configurations, please
+read [Tyk Control Plane chart]({{<ref "product-stack/tyk-charts/tyk-control-plane-chart">}}).
+</details>
+</li>
+
+<li>
+<details>
+<summary>New umbrella chart to Tyk Control Plane</summary>
+
+A new [Tyk Control Plane umbrella chart](https://github.com/TykTechnologies/tyk-charts/tree/main/tyk-control-plane) to is added. 
+It is currently in Beta. For installation instructions and configurations, please
+read [Tyk Control Plane chart]({{<ref "product-stack/tyk-charts/tyk-control-plane-chart">}}).
+</details>
+</li>
+
 </ul>
 
   
@@ -161,42 +248,9 @@ Each change log item should be expandable. The first line summarises the changel
 <ul>
 <li>
 <details>
-<summary>Changelog item summary</summary>
+<summary>Global config: Update default MongoDB driver to `mongo-go`</summary>
 
-The actual changelog item text should go here. It should be no more than three or four sentences. It should link to a content page for further explanation where applicable. There should be a blank line between the summary tags and this paragraph, otherwise, links will not be rendered.
-</details>
-</li>
-<li>
-<details>
-<summary>Another changelog item summary</summary>
-
-The actual changelog item text should go here. It should be no more than three or four sentences. It should link to a content page for further explanation where applicable. There should be a blank line between the summary tags and this paragraph, otherwise, links will not be rendered.
-</details>
-</li>
-</ul>
- 
-##### Fixed
-<!-- This section should be a bullet point list that describes the issues fixed in the release. For each fixed issue explain:
-
-- What problem the issue caused
-- How was the issue fixed
-- Link to (new) documentation created as a result of a fix. For example, a new configuration parameter may have been introduced and documented for the fix
-- For OSS - Link to the corresponding issue if possible on GitHub to allow the users to see further info.
-
-Each change log item should be expandable. The first line summarises the changelog entry. It should be then possible to expand this to reveal further details about the changelog item. This is achieved using HTML as shown in the example below. -->
-<ul>
-<li>
-<details>
-<summary>Changelog item summary</summary>
-
-The actual changelog item text should go here. It should be no more than three or four sentences. It should link to a content page for further explanation where applicable. There should be a blank line between the summary tags and this paragraph, otherwise, links will not be rendered.
-</details>
-</li>
-<li>
-<details>
-<summary>Another changelog item summary</summary>
-
-The actual changelog item text should go here. It should be no more than three or four sentences. It should link to the content page for further explanation where applicable. There should be a blank line between the summary tags and this paragraph, otherwise, links will not be rendered.
+Tyk Charts 1.3.0 uses `mongo-go` as the default driver to connect to MongoDB. `mongo-go` driver is compatible with MongoDB 4.4.x and above. For MongoDB versions prior to 4.4, please change `global.mongo.driver` to `mgo`. We recommend reading [Choose a MongoDB driver]({{<ref "/planning-for-production/database-settings/mongodb#choose-a-mongodb-driver">}}) when you need to change driver setting.
 </details>
 </li>
 </ul>
