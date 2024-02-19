@@ -222,7 +222,7 @@ read [Tyk Control Plane chart]({{<ref "product-stack/tyk-charts/tyk-control-plan
 
 <li>
 <details>
-<summary>New umbrella chart to Tyk Control Plane</summary>
+<summary>New umbrella chart to deploy Tyk Control Plane</summary>
 
 A new [Tyk Control Plane umbrella chart](https://github.com/TykTechnologies/tyk-charts/tree/main/tyk-control-plane) to is added. 
 It is currently in Beta. For installation instructions and configurations, please
