@@ -107,10 +107,7 @@ This release primarily focuses on bug fixes.
 For a comprehensive list of changes, please refer to the detailed [changelog]({{< ref "#Changelog-vX.Y.0">}}) below.
 -->
 ##### Topic in The Release Highlights
-Topic in The Release Highlights
-
-##### Another Topic in The Release Highlights
-Topic in The Release Highlights
+Tyk Charts 1.3 adds support for a number of new Tyk features available from Tyk 5.3.0 like Leaky Bucket Rate Limiter, and configurations for OAS Validate examples, and OAS Validate Schema defaults.
 
 #### Downloads
 - [Source code](https://github.com/TykTechnologies/tyk-charts/archive/refs/tags/v1.3.0.tar.gz)
