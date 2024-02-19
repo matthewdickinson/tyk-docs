@@ -102,7 +102,7 @@ Alternatively, you can use `--set` flag to set it in Tyk installation. See [Usin
 
 ### Set Redis Connection Details (Required)
 
-Tyk uses Redis for distributed rate-limiting and token storage. You may use the Bitnami chart to install or Tyk's `simple-redis` chart for POC purpose.
+Tyk uses Redis for distributed rate-limiting and token storage. You may use the Bitnami chart or Tyk's `simple-redis` to install chart for POC purpose.
 
 Set the following values after installing Redis:
 
