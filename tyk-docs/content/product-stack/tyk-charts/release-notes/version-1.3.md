@@ -173,7 +173,7 @@ longer time, instead of blocking the requests when they go over the defined rate
 <summary>Gateway: Added support for PodDisruptionBudget resource</summary>
 
 Added built-in support for [PodDisruptionBudget](https://kubernetes.io/docs/tasks/run-application/configure-pdb/) resource for Tyk Gateway. 
-To enable it, set `gateway.pdb.enabled` to `true` and configure `gateway.pdb.minAvailable` and `gateway.pdb.maxUnavailable`.
+To enable it, set `gateway.pdb.enabled` to `true` and configure `gateway.pdb.minAvailable` or `gateway.pdb.maxUnavailable`.
 </details>
 </li>
 
