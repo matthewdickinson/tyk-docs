@@ -247,7 +247,7 @@ Each change log item should be expandable. The first line summarises the changel
 <details>
 <summary>Global config: Update default MongoDB driver to `mongo-go`</summary>
 
-Tyk Charts 1.3.0 uses `mongo-go` as the default driver to connect to MongoDB. `mongo-go` driver is compatible with MongoDB 4.4.x and above. For MongoDB versions prior to 4.4, please change `global.mongo.driver` to `mgo`. We recommend reading [Choose a MongoDB driver]({{<ref "/planning-for-production/database-settings/mongodb#choose-a-mongodb-driver">}}) when you need to change driver setting.
+Tyk Charts 1.3.0 uses `mongo-go` as the default driver to connect to MongoDB. `mongo-go` driver is compatible with MongoDB 4.4.x and above. For MongoDB versions prior to 4.4, please change `global.mongo.driver` to `mgo`. We recommend reading [Choose a MongoDB driver]({{<ref "planning-for-production/database-settings/mongodb#choose-a-mongodb-driver">}}) when you need to change driver setting.
 </details>
 </li>
 </ul>
