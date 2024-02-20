@@ -189,7 +189,7 @@ When enabled at `gateway.control.ingress.enabled`, an Ingress resource will be c
 <details>
 <summary>Gateway: Configure Gateway to work with MDCB synchroniser</summary>
 
-Allow users to configure worker gateway to work with [Tyk MDCB synchroniser]({{<ref "/product-stack/tyk-enterprise-mdcb/advanced-configurations/synchroniser">}}) easily by setting `global.mdcbSynchronizer.enabled` in `tyk-data-plane`. 
+Allow users to configure worker gateway to work with [Tyk MDCB synchroniser]({{<ref "product-stack/tyk-enterprise-mdcb/advanced-configurations/synchroniser">}}) easily by setting `global.mdcbSynchronizer.enabled` in `tyk-data-plane`.
 The control plane should be deployed with same `global.mdcbSynchronizer.enabled` value too.
 </details>
 </li>
