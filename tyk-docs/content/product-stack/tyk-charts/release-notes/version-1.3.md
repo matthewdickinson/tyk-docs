@@ -206,7 +206,7 @@ You can enable Internal [Tyk Identity Broker (TIB)]({{<ref "tyk-identity-broker"
 <details>
 <summary>Pump: Added Graph pump support</summary>
 
-[Graph Pumps]({{<ref "/tyk-stack/tyk-pump/tyk-pump-configuration/graph-pump">}}) will be added when user add `mongo` or `postgres` to `pump.backend`. When user add `mongo` to `pump.backend`, Graph MongoDB Pump will be enabled. When user add `postgres` to `pump.backend`, Graph SQL Pump and Graph SQL Aggregate Pump will be enabled.
+[Graph Pumps]({{<ref "tyk-stack/tyk-pump/tyk-pump-configuration/graph-pump">}}) will be added when the user adds `mongo` or `postgres` to `pump.backend`. When `mongo` is added to `pump.backend` the Graph MongoDB Pump will be enabled. When `postgres` is added to `pump.backend` the Graph SQL Pump and Graph SQL Aggregate Pump will be enabled.
 </details>
 </li>
 
