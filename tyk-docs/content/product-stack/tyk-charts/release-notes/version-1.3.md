@@ -214,7 +214,7 @@ You can enable Internal [Tyk Identity Broker (TIB)]({{<ref "tyk-identity-broker"
 <details>
 <summary>New component chart to deploy MDCB</summary>
 
-A new [MDCB component chart](https://github.com/TykTechnologies/tyk-charts/tree/main/components/tyk-mdcb) to is added. 
+A new [MDCB component chart](https://github.com/TykTechnologies/tyk-charts/tree/main/components/tyk-mdcb) has been added to deploy MDCB. 
 It is currently in Beta. For installation instructions and configurations, please
 read [Tyk Control Plane chart]({{<ref "product-stack/tyk-charts/tyk-control-plane-chart">}}).
 </details>
