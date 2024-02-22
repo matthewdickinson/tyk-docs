@@ -159,7 +159,7 @@ It is used to set `TYK_DB_OAS_VALIDATE_SCHEMA_DEFAULTS` and `TYK_GW_OAS_VALIDATE
 
 <li>
 <details>
-<summary>Gateway: Enable Leaky Bucket Rate Limiter</summary>
+<summary>Gateway: Added support for configuring Leaky Bucket Rate Limiter</summary>
 
 Added field `gateway.enableLeakyBucketRateLimiter`. When set to true, it enables leaky bucket rate limiting. 
 LeakyBucket will delay requests so they are processed in a FIFO style queue, ensuring a constant request rate and 
