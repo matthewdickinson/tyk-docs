@@ -2,6 +2,9 @@
 title: Tyk Stack Chart
 description: Install and configure Tyk Stack Chart
 tags: ["Tyk Stack chart", "Tyk Stack Chart", "helm charts", "helm", "charts", "kubernetes", "k8s"]
+aliases:
+  - /deployment-and-operations/tyk-self-managed/deployment-lifecycle/installations/kubernetes/tyk-helm-tyk-stack
+  - /tyk-self-managed/tyk-helm-chart-single-dc
 ---
 
 `tyk-stack` provides the default deployment of Tyk Self Managed on a Kubernetes cluster. It will deploy all required Tyk components with the settings provided in the values.yaml file.

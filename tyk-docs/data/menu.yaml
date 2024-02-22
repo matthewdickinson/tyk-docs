@@ -423,10 +423,6 @@ menu:
               path: /tyk-on-premises/kubernetes
               category: Page
               show: True
-            - title: "Tyk Stack Helm chart"
-              path: /deployment-and-operations/tyk-self-managed/deployment-lifecycle/installations/kubernetes/tyk-helm-tyk-stack
-              category: Page
-              show: False
             - title: "Quick Start with Helm Chart and PostgreSQL"
               path: /deployment-and-operations/tyk-self-managed/deployment-lifecycle/installations/kubernetes/tyk-helm-tyk-stack-postgresql
               category: Page
