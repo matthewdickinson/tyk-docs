@@ -4,9 +4,9 @@ description: Install and configure Tyk Stack Chart
 tags: ["Tyk Stack chart", "Tyk Stack Chart", "helm charts", "helm", "charts", "kubernetes", "k8s"]
 ---
 
-## What components are deployed with Tyk Stack Chart?
-
 `tyk-stack` provides the default deployment of Tyk Self Managed on a Kubernetes cluster. It will deploy all required Tyk components with the settings provided in the values.yaml file.
+
+## What components are deployed with Tyk Stack Chart?
 
 It includes:
 - Tyk Gateway, an Open Source Enterprise API Gateway (supporting REST, GraphQL, TCP and gRPC protocols).

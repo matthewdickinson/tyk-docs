@@ -4,9 +4,9 @@ description: Explains the Tyk Control Plane Chart
 tags: ["Tyk Control Plane chart", "Control Plane Chart", "helm charts", "helm", "charts", "kubernetes", "k8s"]
 ---
 
-## What components are deployed with Tyk Control Plane Chart?
-
 The `tyk-control-plane` provides the default deployment of Tyk control plane on a Kubernetes cluster. It will deploy all required Tyk components with the settings provided in the values.yaml file.
+
+## What components are deployed with Tyk Control Plane Chart?
 
 It includes:
 - Tyk Gateway, an Open Source Enterprise API Gateway (supporting REST, GraphQL, TCP and gRPC protocols).

@@ -4,9 +4,9 @@ description: Install and configure Tyk Data Plane
 tags: ["Tyk Data Plane chart", "Data Plane Chart", "helm charts", "helm", "charts", "kubernetes", "k8s"]
 ---
 
-## What components are deployed with Tyk Data Plane Chart?
-
 The `tyk-data-plane` chart provides the default deployment of a Tyk data plane for Tyk Self Managed MDCB or Tyk Cloud users. It will deploy the data plane components that remotely connect to a MDCB control plane.
+
+## What components are deployed with Tyk Data Plane Chart?
 
 It includes the following components:
 - *Tyk Gateway*: An open source Enterprise API Gateway, supporting REST, GraphQL, TCP and gRPC protocols.
