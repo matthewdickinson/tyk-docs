@@ -27,14 +27,14 @@ To enable or disable each component, change the corresponding enabled flag.
 
 Also, you can set the version of each component through `image.tag`. You can find the list of version tags available from [Docker hub](https://hub.docker.com/u/tykio).
 
-For quick start guide, please see [Deploy hybrid gateway]({{<ref "/tyk-cloud/environments-deployments/hybrid-gateways">}}).
+For a quick start guide, please see [deploy hybrid gateway]({{<ref "tyk-cloud/environments-deployments/hybrid-gateways">}}).
 
 ## Prerequisites
 
-* [Kubernetes 1.19+](https://kubernetes.io/docs/setup/)
-* [Helm 3+](https://helm.sh/docs/intro/install/)
-* [Redis](https://tyk.io/docs/tyk-oss/ce-helm-chart/#recommended-via-bitnami-chart) should already be installed or accessible by the gateway.
-* Connection details to remote control plane. See the [section](#obtain-your-remote-control-plane-connection-details) below for how to obtain them from Tyk Cloud.
+- [Kubernetes 1.19+](https://kubernetes.io/docs/setup/)
+- [Helm 3+](https://helm.sh/docs/intro/install/)
+- [Redis]({{< ref "tyk-oss/ce-helm-chart#recommended-via-bitnami-chart" >}}) should already be installed or accessible by the gateway.
+- Connection details to remote control plane. See the [section](#obtain-your-remote-control-plane-connection-details) below for how to obtain them from Tyk Cloud.
 
 ## Obtain your Remote Control Plane Connection Details from Tyk Cloud
 
