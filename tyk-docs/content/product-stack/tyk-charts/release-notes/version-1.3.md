@@ -84,7 +84,7 @@ There are no deprecations in this release.
 Used to share and notify users about our plan to deprecate features, configs etc. 
 Once you put an item in this section, we must keep this item listed in all the following releases till the deprecation happens. -->
 ##### Future deprecations
-TBC - TT-10903: update gateway and dashboard haskeys values (#208)
+- In `tyk-dashboard` chart, `dashboard.hashKeys` field will be deprecated in future and be replaced with `.global.hashKeys`. This is to ensure Dashboard, Gateway, and MDCB always get the same hashKeys configurations. It is recommended users do not set `dashboard.hashKeys` and only use `.global.hashKeys` field.
 
 #### Upgrade instructions
 <!-- Required. For patches release (Z>0) use this:
@@ -129,14 +129,6 @@ Here it is important to explain the benefit of each changelog item. As mentioned
 
 Each change log item should be expandable. The first line summarises the changelog entry. It should be then possible to expand this to reveal further details about the changelog item. This is achieved using HTML as shown in the example below. -->
 
-<!--
-TT-10903: update gateway and dashboard haskeys values (#208)
-Beta - [TT-8519] MDCB Component Chart (#209)
-Beta - [TT-8522] Tyk Control Plane (#211)
-Beta - [TT-10898] - Add Tyk MDCB synchroniser in tyk-control-plane. (#216) 
-Beta - TT-10819: added support for TLS in mdcb (#219) 
--->
-
 <ul>
 
 <li>
@@ -154,6 +146,18 @@ It is used to set `TYK_DB_OAS_VALIDATE_EXAMPLES` and `TYK_GW_OAS_VALIDATE_EXAMPL
 
 Added field `global.oasValidateSchemaDefaults`. When set to true, it enables validation of schema defaults in the OAS spec. 
 It is used to set `TYK_DB_OAS_VALIDATE_SCHEMA_DEFAULTS` and `TYK_GW_OAS_VALIDATE_SCHEMA_DEFAULTS`.
+</details>
+</li>
+
+<li>
+<details>
+<summary>Global config: Enable/Disable key hashing</summary>
+
+Added field `global.hashKeys`. When set to true, it enables key hashing in Gateway. Dashboard will
+also operate in a mode that is compatible with key hashing. Please do not set `dashboard.hashKeys`
+or make sure `dashboard.hashKeys` is set to the same value or else `dashboard.hashKeys` will take precedence.
+
+Note: `dashboard.hashKeys` will be deprecated in future release.
 </details>
 </li>
 
