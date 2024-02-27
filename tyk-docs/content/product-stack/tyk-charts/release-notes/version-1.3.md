@@ -87,10 +87,10 @@ Once you put an item in this section, we must keep this item listed in all the f
 - In `tyk-dashboard` chart, `dashboard.hashKeys` field will be deprecated in future and be replaced with `.global.hashKeys`. This is to ensure Dashboard, Gateway, and MDCB always get the same hashKeys configurations. It is recommended users do not set `dashboard.hashKeys` and only use `.global.hashKeys` field.
 
 #### Upgrade instructions
-<!-- Required. For patches release (Z>0) use this:
-For users currently on vX.Y.Z, we strongly recommend promptly upgrading to the latest release. If you are working with an older version (lower major), it is advisable to bypass version X.Y.0 and proceed directly to this latest patch release.
+<!-- Required. For patches release (Z>0) use this: -->
+For users currently on v1.2.x, we strongly recommend promptly upgrading to the latest release. 
 <br/>
-Go to the [Upgrading Tyk](#upgrading-tyk) section for detailed upgrade Instructions.
+<!-- Go to the [Upgrading Tyk](#upgrading-tyk) section for detailed upgrade Instructions.
 -->
 You can use helm upgrade to upgrade your release
 
@@ -102,11 +102,11 @@ helm upgrade [RELEASE_NAME] tyk-helm/[CHART_NAME]
 ```
 
 #### Release Highlights
-<!-- Required. Use similar ToV to previous release notes. For example for a patch release:
-This release primarily focuses on bug fixes.
-For a comprehensive list of changes, please refer to the detailed [changelog]({{< ref "#Changelog-vX.Y.0">}}) below.
--->
-##### Topic in The Release Highlights
+<!-- Required. Use similar ToV to previous release notes. For example for a patch release: -->
+This release primarily focuses on adding support for Tyk v5.3 configurations.
+For a comprehensive list of changes, please refer to the detailed [changelog]({{< ref "#Changelog-v1.3.0">}}) below.
+
+##### Support new features available from Tyk v5.3.0
 Tyk Charts 1.3 adds support for a number of new Tyk features available from Tyk 5.3.0. These include: Leaky Bucket Rate Limiter, configurations for OAS Validate examples and OAS Validate Schema defaults.
 
 #### Downloads
@@ -256,8 +256,8 @@ Tyk Charts 1.3.0 uses `mongo-go` as the default driver to connect to MongoDB. `m
 </li>
 </ul>
 
-#### Security Fixes
-<!-- This section should be a bullet point list that should be included when any security fixes have been made in the release, e.g. CVEs. For CVE fixes, consideration needs to be made as follows:
+<!-- #### Security Fixes
+This section should be a bullet point list that should be included when any security fixes have been made in the release, e.g. CVEs. For CVE fixes, consideration needs to be made as follows:
 1. Dependency-tracked CVEs - External-tracked CVEs should be included on the release note.
 2. Internal scanned CVEs - Refer to the relevant engineering and delivery policy.
 
