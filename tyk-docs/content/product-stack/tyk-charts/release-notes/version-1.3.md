@@ -267,31 +267,12 @@ For agreed CVE security fixes, provide a link to the corresponding entry on the 
     - [CVE-2022-33082](https://nvd.nist.gov/vuln/detail/CVE-2022-33082)
 -->
 
-##### Comunity Contributions
-<!-- This section should thank external contributors and include a linked reference to their GitHub username with a summary of their contribution.
-
-Example
-
-Special thanks to the following member of the Tyk community for their contribution to this release:
-
-<ul>
-<li>
-<details>
-<summary>Runtime log error incorrectly produced when using Go Plugin Virtual Endpoints</summary>
-
-Fixed a minor issue with Go Plugin virtual endpoints where a runtime log error was produced from a request, even if the response was successful. Thanks to ghub_user_tag_name for highlighting the issue and proposing a fix.
-</details>
-</li>
-</ul>
--->
-
 <!-- Required. use 3 hyphens --- between release notes of every patch (minors will be on a separate page) -->
 ---
 
 <!--
 Repeat the release notes section above for every patch here
 -->
-
 
 <!-- The footer of the release notes page. It contains a further information section with details of how to upgrade Tyk,
 links to API documentation and FAQs. You can copy it from the previous release. -->
@@ -300,19 +281,5 @@ links to API documentation and FAQs. You can copy it from the previous release. 
 ### Upgrading Tyk
 Please refer to the [upgrading Tyk]({{< ref "upgrading-tyk" >}}) page for further guidance on the upgrade strategy.
 
-### API Documentation
-<!-- Required. Update the link to the Gateway "tyk-gateway-api" or dashboard "tyk-dashboard-api" and the Postman collection
-
-If there were changes in any of Tyk’s API docs:
-
-- Have API endpoints been documented in the release note summary and changelog?				
-- Has a link to the endpoint documentation being included?
-- Has the benefit of the new/updated endpoint been explained in the release highlights and changelog?
--->
-
 ### FAQ
 Please visit our [Developer Support]({{< ref "frequently-asked-questions/faq" >}}) page for further information relating to reporting bugs, upgrading Tyk, technical support and how to contribute.
-
-### Miscellaneous (Optional)
-<!-- For each specific release if there is additional miscellaneous information or announcements that will be helpful to the customer then squads
-should add additional sections to their release notes. -->
