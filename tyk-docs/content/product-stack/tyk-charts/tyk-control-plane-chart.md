@@ -102,7 +102,7 @@ Alternatively, you can use `--set` flag to set it in Tyk installation. See [Usin
 
 ### Set Redis Connection Details (Required)
 
-Tyk uses Redis for distributed rate-limiting and token storage. You may use the Bitnami chart or Tyk's `simple-redis` to install chart for POC purpose.
+Tyk uses Redis for distributed rate-limiting and token storage. You may use the [Bitnami chart](https://github.com/bitnami/charts/tree/main/bitnami/redis) or Tyk's [simple-redis](https://artifacthub.io/packages/helm/tyk-helm/simple-redis) to install chart for POC purpose.
 
 Set the following values after installing Redis:
 
@@ -151,7 +151,7 @@ Another option for Redis, to get started quickly, is to use our [simple-redis](h
 **Warning**
 
 Please note that these provided charts must never be used in production or for anything
-but a quick start evaluation only. Use Bitnami Redis or Official Redis Helm chart in any other case.
+but a quick start evaluation only. Use [Bitnami Redis]((https://github.com/bitnami/charts/tree/main/bitnami/redis)) or [Redis Enterprise operator](https://docs.redis.com/latest/kubernetes/deployment/) in any other case.
 We provide this chart, so you can quickly deploy *Tyk gateway*, but it is not meant for long term storage of data.
 
 {{< /warning >}}
@@ -379,7 +379,9 @@ global:
 
 ***MongoDB or Postgres connection strings***
 
-Storage connection strings can also be provided via a secret. Store the connection string in Kubernetes secret and refer to this secret via `global.{mongo,postgres}.connectionURLSecret.name` and `global.{mongo,postgres}.connectionURLSecret.keyName` field, as follows:
+Storage connection strings can also be provided via a secret. 
+
+For MongoDB, suppose you have a secret named `yourSecret` and you have the mongo connection URL stored in key `mongoConnectionURLkey`. Store the connection string in Kubernetes secret and refer to this secret via `global.mongo.connectionURLSecret.name` and `global.mongo.connectionURLSecret.keyName` field, as follows:
 
 - MongoDB:
 ```yaml
@@ -389,6 +391,8 @@ global:
        name: "yourSecret"
        keyName: "mongoConnectionURLkey"
 ```
+
+For Postgres, suppose you have a secret named `yourSecret` and you have the postgres connection string stored in key `postgreConnectionURLkey`. Store the connection string in Kubernetes secret and refer to this secret via `global.postgres.connectionStringSecret.name` and `global.postgres.connectionStringSecret.keyName` field, as follows:
 
 - Postgres:
 ```yaml
@@ -410,7 +414,7 @@ In Tyk control plane, Tyk Gateway acts as a management gateway that is used for 
 Configure the following details below, inside the `tyk-gateway` section.
 
 #### Update Tyk Gateway Version
-Set version of gateway at `tyk-gateway.gateway.image.tag`. You can find the list of version tags available from [Docker hub](https://hub.docker.com/u/tykio). Please check [Tyk Release notes]({{<ref "/release-notes">}}) carefully while upgrading or downgrading.
+Set version of gateway at `tyk-gateway.gateway.image.tag`. You can find the list of version tags available from [Docker hub](https://hub.docker.com/r/tykio/tyk-gateway/tags). Please check [Tyk Release notes]({{<ref "/product-stack/tyk-gateway/release-notes/overview">}}) carefully while upgrading or downgrading.
 
 #### Enabling TLS
 
