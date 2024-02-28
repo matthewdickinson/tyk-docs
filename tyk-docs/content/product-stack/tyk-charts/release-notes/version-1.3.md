@@ -107,7 +107,7 @@ This release primarily focuses on adding support for Tyk v5.3 configurations.
 For a comprehensive list of changes, please refer to the detailed [changelog]({{< ref "#Changelog-v1.3.0">}}) below.
 
 ##### Support new features available from Tyk v5.3.0
-Tyk Charts 1.3 adds support for a number of new Tyk features available from Tyk 5.3.0. These include: Leaky Bucket Rate Limiter, configurations for OAS Validate examples and OAS Validate Schema defaults.
+Tyk Charts 1.3 adds support for a number of new Tyk features available from Tyk 5.3.0. These include: Configurations for OAS Validate examples and OAS Validate Schema defaults.
 
 #### Downloads
 - [Source code](https://github.com/TykTechnologies/tyk-charts/archive/refs/tags/v1.3.0.tar.gz)
@@ -158,17 +158,6 @@ also operate in a mode that is compatible with key hashing. Please do not set `d
 or make sure `dashboard.hashKeys` is set to the same value or else `dashboard.hashKeys` will take precedence.
 
 Note: `dashboard.hashKeys` will be deprecated in future release.
-</details>
-</li>
-
-<li>
-<details>
-<summary>Gateway: Added support for configuring Leaky Bucket Rate Limiter</summary>
-
-Added field `gateway.enableLeakyBucketRateLimiter`. When set to true, it enables leaky bucket rate limiting. 
-LeakyBucket will delay requests so they are processed in a FIFO style queue, ensuring a constant request rate and 
-smoothing out traffic spikes. This comes at some cost to gateway instances, as the connections would be held for a 
-longer time, instead of blocking the requests when they go over the defined rate limits.
 </details>
 </li>
 
