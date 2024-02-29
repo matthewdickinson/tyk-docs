@@ -379,7 +379,7 @@ global:
 ```
 
 #### SQL Pump
-If you are using the SQL pumps in the tyk-oss installation you will require PostgreSQL installed for that as well.
+If you are using the SQL Pumps in the tyk-oss installation you will require PostgreSQL installed for that as well.
 
 To install PostgreSQL you can use these rather excellent charts provided by Bitnami:
 
