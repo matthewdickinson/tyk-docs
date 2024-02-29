@@ -282,15 +282,13 @@ It can be configured via `global.adminUser.email` as a plain text or Kubernetes 
 
 ***Admin Password***
 
-It can be configured via `global.adminUser.password` as a plain text or Kubernetes secret which includes `adminUserPassword` key
-in it. Then, this secret must be referenced via `global.adminUser.useSecretName`.
+It can be configured via `global.adminUser.password` as a plain text or Kubernetes secret which includes `adminUserPassword` key in it. Then, this secret must be referenced via `global.adminUser.useSecretName`.
 
 ***APISecret***
 
 The `global.secrets.APISecret` field configures a [header value]({{< ref "tyk-oss-gateway/configuration#secret" >}}) used in every interaction with Tyk Gateway API.
 
-It can be configured via `global.secrets.APISecret` as a plain text or Kubernetes secret which includes `APISecret` key
-in it. Then, this secret must be referenced via `global.secrets.useSecretName`.
+It can be configured via `global.secrets.APISecret` as a plain text or Kubernetes secret which includes `APISecret` key in it. Then, this secret must be referenced via `global.secrets.useSecretName`.
 
 ```yaml
 global:
@@ -303,8 +301,7 @@ global:
 
 The `global.secrets.AdminSecret` field sets a [secret]({{< ref "tyk-dashboard/configuration#admin_secret" >}}) for Admin API.
 
-It can be configured via `global.secrets.AdminSecret` as a plain text or Kubernetes secret which includes `AdminSecret` 
-key in it. Then, this secret must be referenced via `global.secrets.useSecretName`.
+It can be configured via `global.secrets.AdminSecret` as a plain text or Kubernetes secret which includes `AdminSecret` key in it. Then, this secret must be referenced via `global.secrets.useSecretName`.
 
 ```yaml
 global:
@@ -320,8 +317,7 @@ Once `global.secrets.useSecretName` is declared, it takes precedence over `globa
 
 ***Dashboard License***
 
-In order to refer Tyk Dashboard license through Kubernetes secret, please use `global.secrets.useSecretName`, where 
-the secret should contain a key called `DashLicense`.
+In order to refer Tyk Dashboard license through Kubernetes secret, please use `global.secrets.useSecretName`, where the secret should contain a key called `DashLicense`.
 
 ***Tyk Developer Portal License***
 
