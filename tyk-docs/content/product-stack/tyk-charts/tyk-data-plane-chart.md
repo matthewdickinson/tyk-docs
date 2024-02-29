@@ -154,9 +154,7 @@ The Tyk Helm Chart can connect to `simple-redis` in the same namespace by defaul
 ### Protect Confidential Fields with Kubernetes Secrets
 
 In the `values.yaml` file, some fields are considered confidential, such as `APISecret`, connection strings, etc.
-Declaring values for such fields as plain text might not be desired for all use cases. Instead, for certain fields,
-Kubernetes secrets can be referenced, and the chart will 
-[define container environment variables using Secret data](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/#define-container-environment-variables-using-secret-data).
+Declaring values for such fields as plain text might not be desired for all use cases. Instead, for certain fields, Kubernetes secrets can be referenced, and the chart will [define container environment variables using secret data](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/#define-container-environment-variables-using-secret-data).
 
 This section describes how to use Kubernetes secrets to declare confidential fields.
 
@@ -164,8 +162,7 @@ This section describes how to use Kubernetes secrets to declare confidential fie
 
 The `global.secrets.APISecret` field configures a [header value]({{ref "tyk-oss-gateway/configuration#secret"}}) used in every interaction with Tyk Gateway API.
 
-It can be configured via `global.secrets.APISecret` as a plain text or Kubernetes secret which includes `APISecret` key
-in it. Then, this secret must be referenced via `global.secrets.useSecretName`.
+It can be configured via `global.secrets.APISecret` as a plain text or Kubernetes secret which includes `APISecret` key in it. Then, this secret must be referenced via `global.secrets.useSecretName`.
 
 ```yaml
 global:
@@ -179,8 +176,7 @@ global:
 All configurations regarding remote control plane (`orgId`, `userApiKey`, and `groupID`) can be set via
 Kubernetes secret.
 
-Instead of explicitly setting them in the values file, just create a Kubernetes secret including `orgId`, `userApiKey`
-and `groupID` keys and refer to it in `global.remoteControlPlane.useSecretName`.
+Instead of explicitly setting them in the values file, just create a Kubernetes secret including `orgId`, `userApiKey` and `groupID` keys and refer to it in `global.remoteControlPlane.useSecretName`.
 
 ```yaml
 global:
