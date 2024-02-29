@@ -181,8 +181,8 @@ Please make sure you are installing MongoDB versions that are supported by Tyk. 
 Important Note regarding MongoDB:
 
 This helm chart enables the `PodDisruptionBudget` for MongoDB with an arbiter replica-count of 1.
-If you intend to perform system maintenance on the node where the MongoDB pod is running and this maintenance requires
-for the node to be drained, this action will be prevented due the replica count being 1.
+If you intend to perform system maintenance on the node where the MongoDB pod is running and this maintenance requires for the node to be drained, this action will be prevented due the replica count being 1.
+
 Increase the replica count in the helm chart deployment to a minimum of 2 to remedy this issue.
 {{< /note >}}
 
