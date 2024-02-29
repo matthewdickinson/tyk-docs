@@ -7,7 +7,7 @@ aliases:
   - /tyk-self-managed/tyk-helm-chart-single-dc
 ---
 
-`tyk-stack` provides the default deployment of Tyk Self Managed on a Kubernetes cluster. It will deploy all required Tyk components with the settings provided in the values.yaml file.
+The `tyk-stack` chart provides the default deployment of Tyk Self Managed on a Kubernetes cluster. It will deploy all required Tyk components with the settings provided in the values.yaml file.
 
 ## What components are deployed with Tyk Stack Chart?
 
