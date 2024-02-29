@@ -387,7 +387,7 @@ To install PostgreSQL you can use these rather excellent charts provided by Bitn
 helm install tyk-postgres bitnami/postgresql --set "auth.database=tyk_analytics" -n tyk
 ```
 
-(follow notes from the installation output to get connection details and update them in `values.yaml` file)
+Follow the notes from the installation output to get connection details and update them in `values.yaml` file.
 
 Add following under the `global` section in `values.yaml`:
 
