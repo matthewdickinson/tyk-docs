@@ -374,11 +374,9 @@ global:
        keyName: "redisPassKey"
 ```
 
-***MongoDB or Postgres connection strings***
+***MongoDB or PostgreSQL connection strings***
 
-Storage connection strings can also be provided via a secret. Store the connection string in Kubernetes secret and
-refer to this secret via `global.{mongo,postgres}.connectionURLSecret.name` and `global.{mongo,postgres}.connectionURLSecret.keyName` field,
-as follows:
+Storage connection strings can also be provided via a secret. Store the connection string in Kubernetes secret and refer to this secret via `global.{mongo,postgres}.connectionURLSecret.name` and `global.{mongo,postgres}.connectionURLSecret.keyName` field, as follows:
 
 - MongoDB:
 ```yaml
@@ -389,7 +387,7 @@ global:
        keyName: "mongoConnectionURLkey"
 ```
 
-- Postgres:
+- PostgreSQL:
 ```yaml
 global:
   postgres:
