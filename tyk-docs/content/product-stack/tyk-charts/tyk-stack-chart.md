@@ -331,8 +331,7 @@ please use `global.adminUser.useSecretName`, where the secret should contain a k
 
 ***Tyk Developer Portal Storage Connection String***
 
-In order to refer Tyk Developer Portal connection string to the selected database through Kubernetes secret,
-please use `tyk-dev-portal.useSecretName`, where the secret should contain a key called 
+In order to refer Tyk Developer Portal connection string to the selected database through Kubernetes secret,please use `tyk-dev-portal.useSecretName`, where the secret should contain a key called 
 `DevPortalStorageConnectionString`.
 
 {{< note success >}}
