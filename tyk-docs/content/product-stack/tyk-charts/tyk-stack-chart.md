@@ -253,7 +253,7 @@ This section describes how to use Kubernetes secrets to declare confidential fie
 
 ***Tyk Dashboard Admin***
 
-If Tyk Dashboard bootstrapping is enabled, Tyk Dashboard admin user will be created according to the `global.adminUser` field.
+If Tyk Dashboard bootstrapping is enabled, a Tyk Dashboard admin user will be created according to the `global.adminUser` field.
 
 All admin credentials can also be set through Kubernetes secret.
 
