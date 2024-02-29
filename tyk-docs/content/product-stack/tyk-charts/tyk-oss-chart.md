@@ -389,7 +389,7 @@ helm install tyk-postgres bitnami/postgresql --set "auth.database=tyk_analytics"
 
 Follow the notes from the installation output to get connection details and update them in `values.yaml` file.
 
-Add following under the `global` section in `values.yaml`:
+Add the following configuration under the `global` section in `values.yaml`:
 
 ```yaml
 global:
