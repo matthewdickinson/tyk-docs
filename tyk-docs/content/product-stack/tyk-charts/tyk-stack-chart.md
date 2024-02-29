@@ -579,8 +579,6 @@ You can also configure connection settings for it's exporter. By default `grpc` 
 
 To enable Pump, set `global.components.pump` to true, and configure below inside `tyk-pump` section.
 
-<!-- BEGIN import from pump doc -->
-
 | Pump                      | Configuration                                                                                              |
 |---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------| 
 | Prometheus Pump (Default) | Add the value `prometheus` to the `tyk-pump.pump.backend` entry, and add connection details for Prometheus under `tyk-pump.pump.prometheusPump`. |
