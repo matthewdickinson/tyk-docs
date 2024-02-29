@@ -157,7 +157,7 @@ helm install redis tyk-helm/simple-redis -n tyk
 The Tyk Helm Chart can connect to `simple-redis` in the same namespace by default. You do not need to set Redis address and password in `values.yaml`.
 
 ### Set Mongo or PostgresSQL Connection Details (Required)
-If you have already installed MongoDB or PostgreSQL, you can set the connection details in `global.mongo` and `global.postgres` section of values file respectively.
+If you have already installed MongoDB or PostgreSQL, you can set the connection details in the `global.mongo` and `global.postgres` sections of the values.yaml file respectively.
 
 If not, you can use these rather excellent charts provided by Bitnami to install MongoDB or PostgreSQL:
 
