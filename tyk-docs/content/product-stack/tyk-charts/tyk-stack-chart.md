@@ -654,8 +654,8 @@ By default, it will enable Postgres Aggregate, Postgres Graph Aggregate, SQL Pum
 
 #### Uptime Pump
 Uptime Pump can be configured by setting `pump.uptimePumpBackend` in values.yaml file. It supports the following values
-1. mongo: Used to set mongo pump for uptime analytics. Mongo Pump should be enabled.
-2. postgres: Used to set postgres pump for uptime analytics. Postgres Pump should be enabled.
+1. mongo: Used to set Mongo Pump for uptime analytics. Mongo Pump should be enabled.
+2. postgres: Used to set Postgres Pump for uptime analytics. Postgres Pump should be enabled.
 3. empty: Used to disable uptime analytics.
 
 ```yaml
