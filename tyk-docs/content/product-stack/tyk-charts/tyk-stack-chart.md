@@ -515,7 +515,7 @@ Configure the gateways to load APIs with specific tags only by enabling `tyk-gat
 
 #### Deploy additional gateway groups
 
-`tyk-stack` chart manages one Gateway Deployment in the same namespace as Tyk Dashboard. You can flexibly deploy additional gateways using `tyk-gateway` component chart. With gateway sharding, it is useful for:
+The `tyk-stack` chart manages one Gateway deployment in the same namespace as Tyk Dashboard. You can flexibly deploy additional gateways using `tyk-gateway` component chart. With gateway sharding, it is useful for:
 - Deploy Gateways in different networks,
 - Deploy Gateways with different resources and autoscaling parameters,
 - Allow different teams to manage their own Gateway instances in their own namespace.
