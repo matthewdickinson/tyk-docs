@@ -268,8 +268,7 @@ If `global.adminUser.useSecretName` is in use, please add all keys mentioned bel
 
 ***Admin First Name***
 
-It can be configured via `global.adminUser.firstName` as a plain text or Kubernetes secret which includes `adminUserFirstName` key
-in it. Then, this secret must be referenced via `global.adminUser.useSecretName`.
+It can be configured via `global.adminUser.firstName` as a plain text or Kubernetes secret which includes `adminUserFirstName` key in it. Then, this secret must be referenced via `global.adminUser.useSecretName`.
 
 
 ***Admin Last Name***
