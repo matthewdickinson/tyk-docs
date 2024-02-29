@@ -307,7 +307,7 @@ You can configure persistent volume for APIs, Policies, and middlewares using `e
 
 See [Running multiple instances of Tyk Gateway]({{<ref "deployment-and-operations/tyk-open-source-api-gateway/setup-multiple-gateways">}}) for a step-by-step guide on scaling Tyk Gateway on Kubernetes.
 
-#### Setting Environment Variable
+#### Setting Environment Variables
 
 You can add environment variables for Tyk Gateway under `extraEnvs`. This can be used to override any default settings in the chart, e.g.
 
