@@ -653,7 +653,7 @@ To enable SQL pump, add `postgres` to `tyk-pump.pump.backend`, and add connectio
 By default, it will enable Postgres Aggregate, Postgres Graph Aggregate, SQL Pump and SQL graph pump.
 
 #### Uptime Pump
-Uptime Pump can be configured by setting `pump.uptimePumpBackend` in values.yaml file. It support following values
+Uptime Pump can be configured by setting `pump.uptimePumpBackend` in values.yaml file. It supports the following values
 1. mongo: Used to set mongo pump for uptime analytics. Mongo Pump should be enabled.
 2. postgres: Used to set postgres pump for uptime analytics. Postgres Pump should be enabled.
 3. empty: Used to disable uptime analytics.
