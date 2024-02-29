@@ -317,7 +317,7 @@ You can add environment variables for Tyk Gateway under `extraEnvs`. This can be
         value: "false"
 ```
 
-Here is a reference of all [Tyk Gateway Configuration Options]({{<ref "/tyk-oss-gateway/configuration">}}).
+For further details for configuring Tyk Gateway, consult the [Tyk Gateway Configuration Options]({{<ref "tyk-oss-gateway/configuration">}}) guide.
 
 ### Pump Configurations
 
