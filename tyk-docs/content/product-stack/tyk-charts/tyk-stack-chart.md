@@ -749,7 +749,7 @@ If you use the file system as storage, please set `tyk-dev-portal.storage.type` 
 
 If you use [AWS S3](https://aws.amazon.com/s3/) as storage, please set `tyk-dev-portal.storage.type` to `s3`, and configure `tyk-dev-portal.storage.s3` section with credentials to access AWS S3 bucket.
 
-If you use database as storage, please set `tyk-dev-portal.storage.type` to `db`, and configure `tyk-dev-portal.database` section with database connection details.
+If you use database as storage, please set `tyk-dev-portal.storage.type` to `db`, and configure the `tyk-dev-portal.database` section with database connection details.
 
 ```yaml
 tyk-dev-portal:
