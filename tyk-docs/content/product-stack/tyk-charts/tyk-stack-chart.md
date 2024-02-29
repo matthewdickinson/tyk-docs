@@ -273,13 +273,11 @@ It can be configured via `global.adminUser.firstName` as a plain text or Kuberne
 
 ***Admin Last Name***
 
-It can be configured via `global.adminUser.lastName` as a plain text or Kubernetes secret which includes `adminUserLastName` key
-in it. Then, this secret must be referenced via `global.adminUser.useSecretName`.
+It can be configured via `global.adminUser.lastName` as a plain text or Kubernetes secret which includes `adminUserLastName` key in it. Then, this secret must be referenced via `global.adminUser.useSecretName`.
 
 ***Admin Email***
 
-It can be configured via `global.adminUser.email` as a plain text or Kubernetes secret which includes `adminUserEmail` key
-in it. Then, this secret must be referenced via `global.adminUser.useSecretName`.
+It can be configured via `global.adminUser.email` as a plain text or Kubernetes secret which includes `adminUserEmail` key in it. Then, this secret must be referenced via `global.adminUser.useSecretName`.
 
 
 ***Admin Password***
