@@ -348,7 +348,7 @@ To install MongoDB you can use these rather excellent charts provided by Bitnami
 helm install tyk-mongo bitnami/mongodb --version {HELM_CHART_VERSION} --set "replicaSet.enabled=true" -n tyk
 ```
 
-(follow notes from the installation output to get connection details and update them in `values.yaml` file)
+Follow notes from the installation output to get connection details and update them in the `values.yaml` file.
 
 NOTE: [Here is](https://tyk.io/docs/planning-for-production/database-settings/) list of supported MongoDB versions. Please make sure you are installing mongo helm chart that matches these version.
 
