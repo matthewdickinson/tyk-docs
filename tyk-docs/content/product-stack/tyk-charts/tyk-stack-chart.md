@@ -701,7 +701,7 @@ Optional Steps, if needed:
 
 ### Tyk Bootstrap Configurations
 
-To enable bootstrapping, set `global.components.bootstrap` to `true`. It would run [tyk-k8s-bootstrap](https://github.com/TykTechnologies/tyk-k8s-bootstrap) to bootstrap `tyk-stack` and to create Kubernetes secrets that can be utilized in Tyk Operator and Tyk Developer Portal.
+To enable bootstrapping, set `global.components.bootstrap` to `true`. It would run [tyk-k8s-bootstrap](https://github.com/TykTechnologies/tyk-k8s-bootstrap) to bootstrap `tyk-stack` and to create Kubernetes secrets that can be utilised in Tyk Operator and Tyk Developer Portal.
 
 #### Bootstrapped Environments
 
