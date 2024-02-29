@@ -61,7 +61,7 @@ At a minimum, modify values.yaml for the following settings:
 2. [Set Mongo or PostgresSQL connection details](#set-mongo-or-postgressql-connection-details-required)
 3. [Dashboard License](#tyk-dashboard-license-required)
 
-If you would like to use Developer Portal, additional license is required:
+If you would like to use Developer Portal, an additional license is required:
 
 4. [Developer Portal License](#tyk-developer-portal-license-required)
 
