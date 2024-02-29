@@ -274,7 +274,7 @@ Set `tyk-gateway.gateway.control.enabled` to true will allow you to run the [Gat
 
 #### Mounting APIs, Policies, and Middlewares
 
-By default, Gateway stores API configurations at `/mnt/tyk-gateway/apps` inside the Gateway container. There are a a few challenges:
+By default, the Gateway stores API configurations at `/mnt/tyk-gateway/apps` inside the Gateway container. There are a a few challenges:
 - Multiple gateways do not share app configs
 - The configuration is not persistent. It got lost whenever pod restart
 
