@@ -672,7 +672,7 @@ To setup other backends for pump, refer to this [document](https://github.com/Ty
 
 #### Tyk Dashboard License (Required)
 
-Tyk Dashboard License is required. It can be set up in `global.license.dashboard` or through secret `global.secrets.useSecretName`. The secret should contain a key called DashLicense.
+Tyk Dashboard License is required. It can be set up in `global.license.dashboard` or through secret `global.secrets.useSecretName`. The secret should contain a key called *DashLicense*.
 
 ```yaml
 global:
