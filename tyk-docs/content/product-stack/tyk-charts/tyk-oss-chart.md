@@ -342,7 +342,7 @@ See [Configure Tyk Pump to expose analytics data to Prometheus]({{<ref "product-
 #### Mongo Pump
 If you are using the MongoDB pumps in the tyk-oss installation you will require MongoDB installed for that as well.
 
-To install Mongo you can use these rather excellent charts provided by Bitnami:
+To install MongoDB you can use these rather excellent charts provided by Bitnami:
 
 ```bash
 helm install tyk-mongo bitnami/mongodb --version {HELM_CHART_VERSION} --set "replicaSet.enabled=true" -n tyk
