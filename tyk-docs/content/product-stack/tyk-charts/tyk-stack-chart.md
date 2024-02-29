@@ -223,19 +223,19 @@ Please make sure you are installing PostgreSQL versions that are supported by Ty
 
 ```yaml
 global:
-  # Postgres connection string parameters.
+  # PostgreSQL connection string parameters.
   postgres:
-    # host corresponds to the host name of postgres
+    # host corresponds to the host name of postgreSQL
     host: tyk-postgres-postgresql.tyk.svc
-    # port corresponds to the port of postgres
+    # port corresponds to the port of postgreSQL
     port: 5432
-    # user corresponds to the user of postgres
+    # user corresponds to the user of postgreSQL
     user: postgres
     # password corresponds to the password of the given postgres user in selected database
     password:
-    # database corresponds to the database to be used in postgres
+    # database corresponds to the database to be used in postgreSQL
     database: tyk_analytics
-    # sslmode corresponds to if postgres runs in sslmode (https)
+    # sslmode corresponds to if postgreSQL runs in sslmode (https)
     sslmode: disable
     # Connection string can also be set using a secret. Provide the name of the secret and key below.
     # connectionStringSecret:
