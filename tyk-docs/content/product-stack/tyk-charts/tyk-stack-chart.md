@@ -364,8 +364,7 @@ If `tyk-dev-portal.useSecretName` is in use, please add all keys mentioned to th
 
 ***Redis Password***
 
-Redis password can also be provided via a secret. Store Redis password in Kubernetes secret and refer to this secret
-via `global.redis.passSecret.name` and `global.redis.passSecret.keyName` field, as follows:
+Redis password can also be provided via a secret. Store the Redis password in a Kubernetes secret and refer to this secret as follows:
 
 ```yaml
 global:  
