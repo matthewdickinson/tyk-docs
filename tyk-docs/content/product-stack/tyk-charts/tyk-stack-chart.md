@@ -85,7 +85,7 @@ helm upgrade tyk-stack tyk-helm/tyk-stack -n tyk -f values.yaml
 
 ## Configuration
 
-To get all configurable options with detailed comments:
+To list all configurable options with detailed comments:
 
 ```bash
 helm show values tyk-helm/tyk-stack > values.yaml
