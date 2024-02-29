@@ -743,7 +743,7 @@ tyk-dev-portal:
 
 #### Storage Settings
 
-Tyk Developer Portal supports different storage options for storing the portal's CMS assets such as images, theme files and Open API Specification files. Please see the [Developer Portal Storage settings]({{<ref "product-stack/tyk-enterprise-developer-portal/deploy/configuration#portal-settings">}}) page for all the available options. 
+Tyk Developer Portal supports different storage options for storing the portal's CMS assets such as images, theme files and Open API Specification files. Please see the [Developer Portal storage settings]({{<ref "product-stack/tyk-enterprise-developer-portal/deploy/configuration#portal-settings">}}) page for all the available options. 
 
 If you use the file system as storage, please set `tyk-dev-portal.storage.type` to `fs`, and configure `tyk-dev-portal.storage.persistence` to mount an existing persistent volume to Tyk Developer Portal.
 
