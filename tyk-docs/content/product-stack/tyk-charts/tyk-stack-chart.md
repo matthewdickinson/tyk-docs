@@ -342,8 +342,7 @@ If `tyk-dev-portal.useSecretName` is in use, please add all keys mentioned to th
 
 ***Tyk Developer Portal AWS S3 Access Key ID***
 
-In order to refer Tyk Developer Portal AWS S3 Access Key ID through Kubernetes secret,
-please use `tyk-dev-portal.useSecretName`, where the secret should contain a key called 
+In order to refer to the Tyk Enterprise Developer Portal AWS S3 Access Key ID using a Kubernetes secret, please use `tyk-dev-portal.useSecretName`, where the secret should contain a key called
 `DevPortalAwsAccessKeyId`.
 
 {{< note success >}}
