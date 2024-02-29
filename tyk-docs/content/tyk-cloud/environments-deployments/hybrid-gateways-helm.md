@@ -15,7 +15,7 @@ weight: 5
 
 `tyk-hybrid` chart is deprecated. Please use our [Tyk Data Plane helm chart]({{<ref "tyk-cloud/environments-deployments/hybrid-gateways#deploy-in-kubernetes-with-helm-chart">}}) instead. 
 
-We recommend all users to migrate to `tyk-data-plane` Chart. Please review the [Configuration]({{<ref "/product-stack/tyk-charts/tyk-data-plane-chart#configuration">}}) section of the new helm chart and cross-check with your existing configurations while planning for migration. 
+We recommend that all users to migrate to the `tyk-data-plane` Chart. Please review the [Configuration]({{<ref "/product-stack/tyk-charts/tyk-data-plane-chart#configuration">}}) section of the new helm chart and cross-check with your existing configurations while planning for migration. 
 {{< /warning >}}
 
 ### 1. Add the Tyk official Helm repo `tyk-helm` to your local Helm repository
