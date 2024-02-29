@@ -279,7 +279,8 @@ By default, the Gateway stores API configurations at `/mnt/tyk-gateway/apps` ins
 - The configuration is not persistent. i.e. it will not be retained whenever a pod restarts.
 
 The same applies to security policies and middleware too, which are stored at `/mnt/tyk-gateway/policies` and `/mnt/tyk-gateway/middleware` respectively.
-This can be solved by instantiating a Persistent Volume as shared storage for the gateway instances. As each gateway is reload, they would get the API configurations from the same storage, solving the synchronisation issue between gateways. Also, the storage is persistent and can be designed to be not impacted by cluster failure, your API configurations can be maintained after pod restart.
+
+This can be solved by instantiating a Persistent Volume as shared storage for the gateway instances. As each gateway is reloaded, they would get the API configurations from the same storage, solving the synchronisation issue between gateways. Also, the storage is persistent and can be designed to be resilient to cluster failure, thus your API configurations can be maintained after pod restart.
 
 You can configure persistent volume for APIs, Policies, and middlewares using `extraVolumes` and `extraVolumeMounts`:
 
