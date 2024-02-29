@@ -146,8 +146,7 @@ This section describes how to use Kubernetes secrets to declare confidential fie
 
 The `global.secrets.APISecret` field configures a [header value]({{ref "tyk-oss-gateway/configuration#secret"}}) used in every interaction with Tyk Gateway API.
 
-It can be configured via `global.secrets.APISecret` as a plain text or Kubernetes secret which includes `APISecret` key
-in it. Then, this secret must be referenced via `global.secrets.useSecretName`.
+It can be configured via `global.secrets.APISecret` as a plain text or Kubernetes secret which includes `APISecret` key in it. Then, this secret must be referenced via `global.secrets.useSecretName`.
 
 ```yaml
 global:
