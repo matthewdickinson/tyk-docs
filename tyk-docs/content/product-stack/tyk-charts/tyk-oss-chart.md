@@ -138,9 +138,7 @@ The Tyk Helm Chart can connect to `simple-redis` in the same namespace by defaul
 ### Protect Confidential Fields with Kubernetes Secrets
 
 In the `values.yaml` file, some fields are considered confidential, such as `APISecret`, connection strings, etc.
-Declaring values for such fields as plain text might not be desired for all use cases. Instead, for certain fields,
-Kubernetes secrets can be referenced, and the chart will 
-[define container environment variables using Secret data](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/#define-container-environment-variables-using-secret-data).
+Declaring values for such fields as plain text might not be desired for all use cases. Instead, for certain fields, Kubernetes secrets can be referenced and the chart will [define container environment variables using Secret data](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/#define-container-environment-variables-using-secret-data).
 
 This section describes how to use Kubernetes secrets to declare confidential fields.
 
