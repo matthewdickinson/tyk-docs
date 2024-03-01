@@ -109,6 +109,9 @@ For a comprehensive list of changes, please refer to the detailed [changelog]({{
 ##### Support new features available from Tyk v5.3.0
 Tyk Charts 1.3 adds support for a number of new Tyk features available from Tyk 5.3.0. These include: Configurations for OAS Validate examples and OAS Validate Schema defaults.
 
+##### Graph Pump
+Tyk Charts 1.3 adds support for Graph MongoDB Pump, Graph SQL Pump and Graph SQL Aggregate Pump. see [Graph Pump setup]({{<ref "/tyk-stack/tyk-pump/tyk-pump-configuration/graph-pump">}}) to learn more about the GraphQL-specific metrics available.
+
 #### Downloads
 - [Source code](https://github.com/TykTechnologies/tyk-charts/archive/refs/tags/v1.3.0.tar.gz)
 
