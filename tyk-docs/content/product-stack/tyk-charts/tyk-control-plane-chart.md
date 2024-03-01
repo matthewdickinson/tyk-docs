@@ -596,7 +596,7 @@ Assuming that TLS certificates for the Tyk Dashboard are available in the Kubern
 Optional Steps, if needed:
 - Modify the secret mount path on the Tyk Dashboard Pod via `tyk-dashboard.dashboard.tls.certificatesMountPath`.
 - If necessary, either enable `insecureSkipVerify` via `tyk-dashboard.dashboard.tls.certificates`, or mount CA information through `tyk-dashboard.dashboard.extraVolumes` and `tyk-dashboard.dashboard.extraVolumeMounts`.
-- If the `tyk-bootstrap` chart is used to bootstrap the Tyk Dashboard, ensure that it has certificates to send requests to the Tyk Dashboard or enable `insecureSkipVerify` in the `tyk-bootstrap` chart.
+- If the `tyk-bootstrap` chart is used to bootstrap the Tyk Dashboard, ensure that bootstrap app can validate certificate of Tyk Dashboard or enable `insecureSkipVerify` in the `tyk-bootstrap` chart.
 - If the Tyk Gateway connects to the Tyk Dashboard, confirm that the Tyk Gateway has appropriate certificates for connecting to the Tyk Dashboard
 
 ### Tyk MDCB Configurations
