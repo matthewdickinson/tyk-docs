@@ -151,7 +151,7 @@ Another option for Redis, to get started quickly, is to use our [simple-redis](h
 **Warning**
 
 Please note that these provided charts must never be used in production or for anything
-but a quick start evaluation only. Use [Bitnami Redis]((https://github.com/bitnami/charts/tree/main/bitnami/redis)) or [Redis Enterprise operator](https://docs.redis.com/latest/kubernetes/deployment/) in any other case.
+but a quick start evaluation only. Use [Bitnami Redis](https://github.com/bitnami/charts/tree/main/bitnami/redis) or [Redis Enterprise operator](https://docs.redis.com/latest/kubernetes/deployment/) in any other case.
 We provide this chart, so you can quickly deploy *Tyk gateway*, but it is not meant for long term storage of data.
 
 {{< /warning >}}
