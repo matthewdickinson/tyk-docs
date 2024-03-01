@@ -221,7 +221,7 @@ If you want to use your own key/cert pair, please follow the following steps:
 3. Set `tyk-gateway.gateway.tls.useDefaultTykCertificate` to false.
 4. Set `tyk-gateway.gateway.tls.secretName` to the name of the newly created secret.
 
-*Add Custom Certificates*
+*Add Custom CA Certificates*
 
 To add your custom Certificate Authority(CA) to your containers, you can mount your CA certificate directly into /etc/ssl/certs folder.
 
