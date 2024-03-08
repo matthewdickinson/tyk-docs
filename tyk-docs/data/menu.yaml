@@ -2310,6 +2310,10 @@ menu:
           path: /tyk-dashboard/rbac
           category: Page
           show: True
+        - title: "API Categories"
+          path: /product-stack/tyk-dashboard/advanced-configurations/api-categories
+          category: Page
+          show: True
       - title: "API documentation"
         category: Directory
         show: True
