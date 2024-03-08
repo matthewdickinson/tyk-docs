@@ -107,7 +107,7 @@ This release primarily focuses on adding support for Tyk v5.3 configurations.
 For a comprehensive list of changes, please refer to the detailed [changelog]({{< ref "#Changelog-v1.3.0">}}) below.
 
 ##### Support new features available from Tyk v5.3.0
-Tyk Charts 1.3 adds support for a number of new Tyk features available from Tyk 5.3.0. These include: Configurations for OAS Validate examples and OAS Validate Schema defaults.
+Tyk Charts 1.3 adds support for a number of new Tyk features available from Tyk 5.3.0. These include: Support use of SSL certificates when connecting to Redis, Configurations for OAS Validate examples and OAS Validate Schema defaults.
 
 ##### Graph Pump
 Tyk Charts 1.3 adds support for Graph MongoDB Pump, Graph SQL Pump and Graph SQL Aggregate Pump. see [Graph Pump setup]({{<ref "/tyk-stack/tyk-pump/tyk-pump-configuration/graph-pump">}}) to learn more about the GraphQL-specific metrics available.
@@ -133,6 +133,46 @@ Here it is important to explain the benefit of each changelog item. As mentioned
 Each change log item should be expandable. The first line summarises the changelog entry. It should be then possible to expand this to reveal further details about the changelog item. This is achieved using HTML as shown in the example below. -->
 
 <ul>
+
+<li>
+<details>
+<summary>Global config: Support use of SSL certificates when connecting to Redis</summary>
+
+Added following fields in `global.redis` to support use of SSL certificates when connecting to Redis.
+
+```yaml
+    # Allows usage of self-signed certificates when connecting to an encrypted Redis database.
+    # sslInsecureSkipVerify: false
+
+    # Path to the CA file.
+    # sslCAFile: ""
+
+    # The Volume mount path
+    # Default value: /etc/certs
+    # certificatesMountPath: ""
+
+    # Path to the cert file.
+    # sslCertFile: ""
+
+    # Path to the key file.
+    # sslKeyFile: ""
+
+    # Maximum supported TLS version. Valid values are TLS 1.0, 1.1, 1.2, 1.3.
+    # Default value: 1.3
+    # sslMaxVersion: "1.3"
+
+    # Minimum supported TLS version. Valid values are TLS 1.0, 1.1, 1.2, 1.3.
+    # Default value: 1.2
+    # sslMinVersion: "1.2"
+
+    # Name of the tls secret. A secret needs to be created for this manually using the name as specified here
+    # secretName: ""
+
+    # Name of the volume where the secret will be mounted
+    # volumeName: ""
+```
+</details>
+</li>
 
 <li>
 <details>
