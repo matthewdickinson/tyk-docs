@@ -64,7 +64,7 @@ When working with Tyk OAS APIs, the API Designer has a separate **Access** tab w
 You can choose existing categories from the drop-down or define new categories simply by typing in the box. You can also remove the API from a category by clicking on the `x` or deleting the category from the box.
 {{< img src="/img/dashboard/endpoint-designer/categories-oas-add.png" alt="Managing categories for a Tyk OAS API" >}}
 
-#### Managing categories with Tyk OAS APIs
+#### Managing categories with Tyk Classic APIs
 When working with Tyk Classic APIs, the API Designer has a box in the **API Settings** section where you can configure the categories to which the API is assigned.
 {{< img src="/img/dashboard/endpoint-designer/categories-classic.png" alt="Tyk Classic API Designer" >}} 
 
