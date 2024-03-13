@@ -28,7 +28,7 @@ However, Tyk Gateway continues to support Python plugins functionality.
 
 If you wish to use Python plugins using Docker, you can extend the official Tyk Gateway Docker image by adding Python to it. 
 
-An example Dockerfile that extends official Tyk Gateway image and installs python and required modules is shown below.
+This example Dockerfile extends the official Tyk Gateway image to support Python plugins by installing python and the required modules:
 
 ```
 ARG BASE_IMAGE
