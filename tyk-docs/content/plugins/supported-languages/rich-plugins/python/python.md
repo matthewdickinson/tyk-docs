@@ -47,7 +47,7 @@ ENTRYPOINT ["/opt/tyk-gateway/tyk" ]
 CMD [ "--conf=/opt/tyk-gateway/tyk.conf" ]
 ```
 
-Run docker build using this Dockerfile, provide Tyk Gateway image that you would like to extend as build argument `BASE_IMAGE`.
+To use this, you simply run `docker build` with this Dockerfile, providing the Tyk Gateway image that you would like to extend as build argument `BASE_IMAGE`.
 For eg., the following command would extend Tyk Gateway `v5.3.0` by installing Python and related dependencies for Python plugins and builds the image `tyk-gateway-python:v5.3.0`.
 
 `docker build --build-arg BASE_IMAGE=tykio/tyk-gateway:v5.3.0 -t tyk-gateway-python:v5.3.0 .`
