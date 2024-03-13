@@ -60,7 +60,7 @@ apt install python3 python3-dev python3-pip build-essential
 
 ### Install the Required Python Modules
 
-Make sure that "pip" is now available in your system, it should be typically available as "pip", "pip3" or "pipX.X" (where X.X represents the Python version):
+Make sure that "pip" is available in your system, it should be typically available as "pip", "pip3" or "pipX.X" (where X.X represents the Python version):
 
 ```pip3
 pip3 install protobuf grpcio
