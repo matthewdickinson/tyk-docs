@@ -20,14 +20,23 @@ Since v2.9, Tyk supports any currently stable [Python 3.x version](https://www.p
 
 ### Install the Python development packages
 
-If you're using Ubuntu/Debian:
+{{< tabs_start >}}
 
+{{< tab_start "Ubuntu/Debian" >}}
 ```apt
 apt install python3 python3-dev python3-pip build-essential
 ```
 
-If you're using Red Hat or CentOS:
+### Install the Required Python Modules
 
+Make sure that "pip" is now available in your system, it should be typically available as "pip", "pip3" or "pipX.X" (where X.X represents the Python version):
+
+```pip3
+pip3 install protobuf grpcio
+```
+{{< tab_end >}}
+
+{{< tab_start "Red Hat or CentOS" >}}
 ```yum
 yum install python3-devel python3-setuptools
 python3 -m ensurepip
@@ -40,6 +49,41 @@ Make sure that "pip" is now available in your system, it should be typically ava
 ```pip3
 pip3 install protobuf grpcio
 ```
+{{< tab_end >}}
+
+{{< tab_start "Docker" >}}
+Starting from Tyk Gateway version `v5.3.0`, Python is no longer bundled with the official Tyk Gateway Docker image. 
+However, Tyk Gateway continues to support Python plugins functionality. 
+
+If you wish to use Python plugins using docker, you can extend the official Tyk Gateway Docker image by adding Python to it. 
+
+An example Dockerfile that extends official Tyk Gateway image and installs python and required modules are as follows
+
+```
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+
+# For Python plugins
+RUN apt-get install -y python3-setuptools libpython3-dev python3-dev python3-grpcio
+
+EXPOSE 8080 80 443
+
+ENV PORT=8080
+
+WORKDIR /opt/tyk-gateway/
+
+ENTRYPOINT ["/opt/tyk-gateway/tyk" ]
+CMD [ "--conf=/opt/tyk-gateway/tyk.conf" ]
+```
+
+Run docker build using this Dockerfile, provide Tyk Gateway image that you would like to extend as build argument `BASE_IMAGE`.
+For eg., the following command would extend Tyk Gateway by installing Python and related dependencies for Python plugins and builds the image `tyk-gateway-python:v5.3.0`.
+
+`docker build --build-arg BASE_IMAGE=tykio/tyk-gateway:v5.3.0 -t tyk-gateway-python:v5.3.0 .`
+{{< tab_end >}}
+
+{{< tabs_end >}}
+
 
 ### Python versions
 
