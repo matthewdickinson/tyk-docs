@@ -23,7 +23,11 @@ Since v2.9, Tyk supports any currently stable [Python 3.x version](https://www.p
 {{< tabs_start >}}
 
 {{< tab_start "Docker" >}}
-Starting from Tyk Gateway version `v5.3.0`, Python is no longer bundled with the official Tyk Gateway Docker image. 
+{{< note success >}}
+**Note**  
+
+Starting from Tyk Gateway version `v5.3.0`, Python is no longer bundled with the official Tyk Gateway Docker image so you must extend the image to add support for Python plugins.
+{{< /note >}}
 However, Tyk Gateway continues to support Python plugins functionality. 
 
 If you wish to use Python plugins using Docker, you can extend the official Tyk Gateway Docker image by adding Python to it. 
