@@ -22,35 +22,6 @@ Since v2.9, Tyk supports any currently stable [Python 3.x version](https://www.p
 
 {{< tabs_start >}}
 
-{{< tab_start "Ubuntu/Debian" >}}
-```apt
-apt install python3 python3-dev python3-pip build-essential
-```
-
-### Install the Required Python Modules
-
-Make sure that "pip" is now available in your system, it should be typically available as "pip", "pip3" or "pipX.X" (where X.X represents the Python version):
-
-```pip3
-pip3 install protobuf grpcio
-```
-{{< tab_end >}}
-
-{{< tab_start "Red Hat or CentOS" >}}
-```yum
-yum install python3-devel python3-setuptools
-python3 -m ensurepip
-```
-
-### Install the Required Python Modules
-
-Make sure that "pip" is now available in your system, it should be typically available as "pip", "pip3" or "pipX.X" (where X.X represents the Python version):
-
-```pip3
-pip3 install protobuf grpcio
-```
-{{< tab_end >}}
-
 {{< tab_start "Docker" >}}
 Starting from Tyk Gateway version `v5.3.0`, Python is no longer bundled with the official Tyk Gateway Docker image. 
 However, Tyk Gateway continues to support Python plugins functionality. 
@@ -80,6 +51,35 @@ Run docker build using this Dockerfile, provide Tyk Gateway image that you would
 For eg., the following command would extend Tyk Gateway `v5.3.0` by installing Python and related dependencies for Python plugins and builds the image `tyk-gateway-python:v5.3.0`.
 
 `docker build --build-arg BASE_IMAGE=tykio/tyk-gateway:v5.3.0 -t tyk-gateway-python:v5.3.0 .`
+{{< tab_end >}}
+
+{{< tab_start "Ubuntu/Debian" >}}
+```apt
+apt install python3 python3-dev python3-pip build-essential
+```
+
+### Install the Required Python Modules
+
+Make sure that "pip" is now available in your system, it should be typically available as "pip", "pip3" or "pipX.X" (where X.X represents the Python version):
+
+```pip3
+pip3 install protobuf grpcio
+```
+{{< tab_end >}}
+
+{{< tab_start "Red Hat or CentOS" >}}
+```yum
+yum install python3-devel python3-setuptools
+python3 -m ensurepip
+```
+
+### Install the Required Python Modules
+
+Make sure that "pip" is now available in your system, it should be typically available as "pip", "pip3" or "pipX.X" (where X.X represents the Python version):
+
+```pip3
+pip3 install protobuf grpcio
+```
 {{< tab_end >}}
 
 {{< tabs_end >}}
