@@ -145,7 +145,7 @@ Another option for Redis, to get started quickly, is to use our [simple-redis](h
 **Warning**
 
 Please note that these provided charts must never be used in production or for anything
-but a quick start evaluation only. Use Bitnami Redis or Official Redis Helm chart in any other case.
+but a quick start evaluation only. Use [Bitnami Redis](https://github.com/bitnami/charts/tree/main/bitnami/redis) or [Official Redis installation guides](https://redis.io/docs/install/) in any other case.
 We provide this chart, so you can quickly deploy *Tyk gateway*, but it is not meant for long term storage of data.
 
 {{< /warning >}}
@@ -398,10 +398,10 @@ global:
 
 ### Gateway Configurations
 
-Configure below inside `tyk-gateway` section.
+This section explains how to configure the `tyk-gateway` section for updating the Gateway version, enabling TLS, enabling autoscaling etc.
 
 #### Update Tyk Gateway Version
-Set version of gateway at `tyk-gateway.gateway.image.tag`. You can find the list of version tags available from [Docker hub](https://hub.docker.com/u/tykio). Please check [Tyk Release notes]({{<ref "/release-notes">}}) carefully while upgrading or downgrading.
+Set version of gateway at `tyk-gateway.gateway.image.tag`. You can find the list of version tags available from [Docker hub](https://hub.docker.com/r/tykio/tyk-gateway/tags). Please check [Tyk Release notes]({{<ref "/product-stack/tyk-gateway/release-notes/overview">}}) carefully while upgrading or downgrading.
 
 #### Enabling TLS
 
