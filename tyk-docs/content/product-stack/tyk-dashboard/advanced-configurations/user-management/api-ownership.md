@@ -92,7 +92,7 @@ When working with Tyk OAS APIs, you can manage owners for an API using these end
 | `GET`  | `/apis/{apiID}/access`  | Retrieve the list of owners of the specified API                                       |
 
 For each of these endpoints, the payload consists of two string lists: one for user IDs, the other for user group IDs.
-``` json
+```json
 {
   "userIds": [
     "string"
