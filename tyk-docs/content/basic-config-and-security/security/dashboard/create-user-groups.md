@@ -20,7 +20,7 @@ You must have either *admin* or *user groups* permission to be able to modify us
 This also works for Single Sign-On (SSO), as you can specify the user group ID when setting up SSO.
 
 {{< note success >}}
-**Note**  
+**Note**
 
 The availability of this feature depends on your license.
 <br>
