@@ -82,7 +82,7 @@ In this example, we have given the user Admin privileges. To see a detailed brea
 
 You will see the following response to confirm that the user has been created:
 
-``` .json
+```json
 {
   "Message": "User created",
   "Meta": null,
