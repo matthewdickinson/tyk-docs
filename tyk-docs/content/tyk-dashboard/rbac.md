@@ -10,7 +10,7 @@ aliases:
 
 When you start the Tyk Dashboard the first time, the bootstrap process creates an initial "user" for you with admin permissions, which allows them access to control and configure everything in the Dashboard (via the UI or Tyk Dashboard API).
 
-You can create additional "users" for yuor colleagues who need to access Dashboard features. These additional users can be assigned [granular permissions]({{< ref "basic-config-and-security/security/dashboard/user-roles" >}}) so that they only have access to the Dashboard pages (and corresponding Dashboard API endpoints) that they require. For each permission (or "role") you can "deny access", make it "read only", or allow "write access".
+You can create additional "users" for your colleagues who need to access Dashboard features. These additional users can be assigned [granular permissions]({{< ref "basic-config-and-security/security/dashboard/user-roles" >}}) so that they only have access to the Dashboard pages (and corresponding Dashboard API endpoints) that they require. For each permission (or "role") you can "deny access", make it "read only", or allow "write access".
 
 For example you might have a colleague who only needs to be able to access the Analytics, or another who only needs to be able to view API configurations, but not to modify them.
 
