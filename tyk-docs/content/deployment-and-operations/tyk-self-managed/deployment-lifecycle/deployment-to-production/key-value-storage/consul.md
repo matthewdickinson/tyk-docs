@@ -17,7 +17,6 @@ Configuring Tyk Gateway to read values from Consul is straightforward - you simp
             "address": "localhost:8025",
             "scheme": "http",
             "datacenter": "dc-1",
-            "timeout": 30,
             "http_auth": {
                 "username": "",
                 "password": ""
@@ -37,16 +36,15 @@ Configuring Tyk Gateway to read values from Consul is straightforward - you simp
 }
 ```
 
-| Key | Description |
-|-----|-------------|
-| address | The location of the Consul server |
-| scheme |  The URI scheme for the Consul server, e.g. `http` |
-| datacenter |  Consul datacenter (agent) identifier |
-| timeout | |
-| http_auth | Username and password for Tyk to log into Consul using HTTP Basic Auth (if required) |
-| wait_time | |
-| token | |
-| tls_config | Configuration for TLS connection to Consul (if required) |
+| Key        | Description                                                                                                 |
+|------------|-------------------------------------------------------------------------------------------------------------|
+| address    | The location of the Consul server                                                                           |
+| scheme     |  The URI scheme for the Consul server, e.g. `http`                                                          |
+| datacenter |  Consul datacenter (agent) identifier                                                                       |
+| http_auth  | Username and password for Tyk to log into Consul using HTTP Basic Auth (if required by your Consul service) |
+| wait_time  | Limits how long a [Watch will block](https://developer.hashicorp.com/consul/api-docs/features/blocking) (if enabled in your Consul service) |
+| token      | Used to provide a per-request access token to Consul (if required by your Consul service)                   |
+| tls_config | Configuration for TLS connection to Consul (if enabled in your Consul service)                              |
 
 Alternatively, you can configure it using the [environment variables]({{< ref "tyk-oss-gateway/configuration#kvconsuladdress" >}}).
 

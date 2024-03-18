@@ -25,14 +25,14 @@ Configuring Tyk Gateway to read values from Vault is straightforward - you simpl
 }
 ```
 
-| Key | Description |
-|-----|-------------|
-| address | The port and location of the Vault server |
-| agent_adress |  |
-| max_retries | |
-| timeout | |
-| token | Vault root token |
-| kv_version | The version number of Vault, usually defaults to 2 |
+| Key          | Description                                                                                            |
+|--------------|--------------------------------------------------------------------------------------------------------|
+| address      | The address of the Vault server, which must be a complete URL such as `http://www.vault.example.com`   |
+| agent_adress | The address of the local Vault agent, if different from the Vault server, must be a complete URL       |
+| max_retries  | The maximum number of attempts Tyk will make to retrieve the value if Vault returns an error           |
+| timeout      | The maximum time that Tyk will wait for a response from Vault                                          |
+| token        | The Vault root access token                                                                            |
+| kv_version   | The version number of Vault, usually defaults to 2                                                     |
 
 Alternatively, you can configure it using the [environment variables]({{< ref "tyk-oss-gateway/configuration#kvvaulttoken" >}}).
 
