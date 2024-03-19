@@ -23,7 +23,7 @@ When working with OpenAPI described upstream service APIs, your service develope
 If you have specific requirements for your external facing APIs - for example authentication, caching or even a healthcheck endpoint - you can define the appropriate API templates so that when APIs are created on Tyk these fields are automatically and correctly configured.
 
 ## How API templating works
-An API template is a blueprint from which you can build new APIs - it is an incomplete Tyk OAS API definition JSON that you can use as the starting point when creating a new API on Tyk. There is no limit to how much or how little of the API definition is pre-configured in the template (such that when you choose to create a new API without choosing a template, the blank API definition that you start from is itself a template).
+An API template is a blueprint from which you can build new APIs - it is an incomplete JSON representation of a Tyk OAS API definition that you can use as the starting point when creating a new API on Tyk. There is no limit to how much or how little of the API definition is pre-configured in the template (such that when you choose to create a new API without choosing a template, the blank API definition that you start from is itself a template).
 
 Templates are used only during the creation of an API, they cannot be applied later. Before you can use a template as the basis for an API, you must register the template with Tyk Dashboard.
 
