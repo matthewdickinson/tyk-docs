@@ -15,7 +15,8 @@ Custom Go plugins can access various data objects relating to the API request:
 
 Custom Go plugins can also [terminate the request]({{< ref "product-stack/tyk-gateway/advanced-configurations/plugins/golang/writing-go-plugins#terminating-the-request" >}}) and stop further processing of the API request such that it is not sent to the upstream service.
 
-There are more resources and examples to help you create your custom logic in our [Plugin Hub]({{< ref "plugins/plugin-hub">}}) and [examples]({{< ref "product-stack/tyk-gateway/advanced-configurations/plugins/golang/go-plugin-examples" >}}).
+For more resources for writing plugins, please visit our [Plugin Hub]({{< ref "plugins/plugin-hub">}}).
+To see an example of a Go plugin, please visit our [Go plugin examples]({{< ref "product-stack/tyk-gateway/advanced-configurations/plugins/golang/go-plugin-examples" >}}) page.
 
 ## Accessing the internal state of a custom plugin
 A Golang plugin can be treated as a normal Golang package but:

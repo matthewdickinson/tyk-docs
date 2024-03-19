@@ -5,12 +5,12 @@ description: "Example custom plugins in Golang"
 tags: ["custom plugin", "golang", "go plugin", "middleware", "examples"]
 ---
 
-Here we provide some worked example for performing specific functionality with a custom Go plugin.
+This document provides a working example for providing specific functionality with a custom Go plugin.
 
-There are more resources in our [Plugin Hub]({{< ref "plugins/plugin-hub">}}).
+For more resources for writing plugins, please visit our [Plugin Hub]({{< ref "plugins/plugin-hub">}}).
 
 ## Using a custom Go plugin as a virtual endpoint
-It is possible to send a response from the Golang plugin custom middleware. So in the case that the HTTP response was sent:
+It is possible to send a response from the Golang plugin custom middleware. In the case that the HTTP response was sent:
 
 * The HTTP request processing is stopped and other middleware in the chain won't be used.
 * The HTTP request round-trip to the upstream target won't happen
