@@ -23,7 +23,7 @@ All of Tyk's [custom middleware hooks]({{< ref "plugins/plugin-types/plugintypes
  - **Auth** - this middleware performs custom authentication and adds API key session info into the request context and can be used only if the API definition has both:
    - `"use_keyless": false`
    - `"use_go_plugin_auth": true`
- - **Post-Auth** - supports an array of middleware to be run after authentication; at this point, we have authenticated the session API key for the given key (in the request context) so we can perform any extra checks; this can be used only if the API definition has both:
+ - **Post-Auth** - supports an array of middleware to be run after authentication; at this point, we have authenticated the session API key for the given key (in the request context) so we can perform any extra checks. This can be used only if the API definition has both:
    - `"use_keyless": false`
    - an authentication method specified
  - **Post** - supports an array of middlewares to be run at the very end of the middleware chain; at this point Tyk is about to request a round-trip to the upstream target
