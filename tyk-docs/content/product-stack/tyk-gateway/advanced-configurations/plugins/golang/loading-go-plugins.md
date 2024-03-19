@@ -31,7 +31,7 @@ Here we have:
 * `post.name` - is your function name from the Go plugin project.
 * `post.path` - is the full or relative (to the Tyk binary) path to the shared object (`.so`) file containing the plugin implementation. Ensure Tyk has read access to this file.
 
-Also, let's set fields `"use_keyless": true` and `"target_url": "http://httpbin.org/"` - for testing purposes (we need to see what request arrives to our upstream target and `httpbin.org` is a perfect fit for that).
+Also, let's set fields `"use_keyless": true` and `"target_url": "http://httpbin.org/"` - for testing purposes. We will test what request arrives to our upstream target and `httpbin.org` is a perfect fit for that.
 
 The API needs to be reloaded after that change (this happens automatically when you save the updated API in the Dashboard).
 
