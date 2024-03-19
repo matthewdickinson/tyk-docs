@@ -91,7 +91,8 @@ Specify public keys used for Certificate Pinning on global level.
 EV: <b>TYK_GW_SECURITY_CERTIFICATES_UPSTREAM</b><br />
 Type: `map[string]string`<br />
 
-Specify upstream mutual TLS certificates at a global level in the following format: `{ "<host>": "<cert>" }``
+Specify upstream mutual TLS certificates at a global level as a map of domain -> certificate id or path.<br />
+In tyk.conf, this would be `"security": {"certificates": {"upstream": {"*": "/certs/default.pem", "example.com": "ab23ef123"}}},`; as an environmental variable it would be `*:/certs/default.pem,example.com:ab23ef123`.
 
 ### security.certificates.control_api
 EV: <b>TYK_GW_SECURITY_CERTIFICATES_CONTROLAPI</b><br />
