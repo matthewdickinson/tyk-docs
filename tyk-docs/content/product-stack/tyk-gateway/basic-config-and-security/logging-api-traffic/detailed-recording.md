@@ -14,7 +14,7 @@ This is referred to as detailed recording and can be enabled at different levels
 2. [Key level]({{< ref "product-stack/tyk-gateway/basic-config-and-security/logging-api-traffic/detailed-recording#configuration-at-the-key-level" >}})
 3. [Gateway level]({{< ref "product-stack/tyk-gateway/basic-config-and-security/logging-api-traffic/detailed-recording#configuration-at-the-gateway-level" >}})
 
-i.e. Tyk will first check whether the API definition has detailed recording enabled to determine whether to log the request and response bodies. If it does not, then it will check the key being used in the request and finally it will check the Gateway configuration.
+Consequently, Tyk will first check whether the API definition has detailed recording enabled to determine whether to log the request and response bodies. If it does not, then it will check the key being used in the request and finally it will check the Gateway configuration.
 
 {{< note success >}}
 **Note**  
