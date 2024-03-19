@@ -89,7 +89,7 @@ Adding the track endpoint middleware to your API endpoints is easy when using th
 
  < placeholder for video >
 
-### Selecting Tyk Classic APIs endpoints to be tracked 
+### Selecting Tyk Classic API endpoints to be tracked 
 If you are working with Tyk Classic APIs then you must add a new `track_endpoints` object to the `extended_paths` section of your API definition.
 
 The `track_endpoints` object has the following configuration:
