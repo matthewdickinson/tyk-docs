@@ -111,7 +111,7 @@ For example:
 }
 ```
 
-In this example the track endpoint middleware has been configured for HTTP `GET` requests to the `/anything` endpoint. Any such calls will appear in the Endpoint Popularity analytics.
+In this example the track endpoint middleware has been configured for HTTP `GET` requests to the `/anything` endpoint.  These requests will appear in the Endpoint Popularity analytics screen, located within the API Usage section of Tyk Dashboard.
 
 #### Configuring the middleware in the API Designer
 You can use the API Designer in the Tyk Dashboard to configure the track endpoint middleware for your Tyk Classic API by following these steps.
