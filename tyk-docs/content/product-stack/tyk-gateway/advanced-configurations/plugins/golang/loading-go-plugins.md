@@ -29,7 +29,7 @@ Here we have:
 * `"driver"` - Set this to `goplugin` (no value created for this plugin) which says to Tyk that this custom middleware is a Golang native plugin.
 * `"post"` - This is the hook name. We use middleware with hook type `post` because we want this custom middleware to process the request right before it is passed to the upstream target (we will look at other types later).
 * `post.name` - is your function name from the Go plugin project.
-* `post.path` - is the full or relative (to the Tyk binary) path to `.so` file with plugin implementation (make sure Tyk has read access to this file)
+* `post.path` - is the full or relative (to the Tyk binary) path to the shared object (`.so`) file containing the plugin implementation. Ensure Tyk has read access to this file.
 
 Also, let's set fields `"use_keyless": true` and `"target_url": "http://httpbin.org/"` - for testing purposes (we need to see what request arrives to our upstream target and `httpbin.org` is a perfect fit for that).
 
