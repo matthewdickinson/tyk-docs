@@ -121,5 +121,5 @@ From the **Endpoint Designer** add an endpoint that matches the path for which y
 
 {{< img src="img/dashboard/analytics/classic_track_endpoint.png" alt="Select the middleware" >}}
 
-#### Step 2: Save the API
+##### Step 2: Save the API
 Use the *save* or *create* buttons to save the changes and activate the middleware for the selected endpoint.
