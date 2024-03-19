@@ -80,7 +80,7 @@ For example:
 }
 ```
 
-In this example the track endpoint middleware has been configured for HTTP `GET` requests to the `/anything` endpoint. Any such calls will appear in the Endpoint Popularity analytics.
+In this example the track endpoint middleware has been configured for HTTP `GET` requests to the `/anything` endpoint. These requests will appear in the Endpoint Popularity analytics screen, located within the API Usage section of Tyk Dashboard.
 
 The configuration above is a complete and valid Tyk OAS API Definition that you can import into Tyk to try out the track endpoint middleware.
 
