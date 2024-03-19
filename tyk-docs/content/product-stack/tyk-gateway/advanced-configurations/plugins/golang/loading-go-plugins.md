@@ -5,7 +5,7 @@ description: "How to load your custom Go plugins into Tyk"
 tags: ["custom plugin", "golang", "go plugin", "middleware"]
 ---
 
-For development purposes, we going to load the plugin from local files. For production, you can use [bundles](#loading-a-tyk-golang-plugin-from-a-bundle) to deploy plugins to multiple gateways.
+For development purposes, we are going to load the plugin from local file storage. For production, you can use [bundles](#loading-a-tyk-golang-plugin-from-a-bundle) to deploy plugins to multiple gateways.
 
 In the API definition find the `custom_middleware` section and make it look similar to the snippet below. Tyk Dashboard users should use RAW API Editor to access this section.
 
