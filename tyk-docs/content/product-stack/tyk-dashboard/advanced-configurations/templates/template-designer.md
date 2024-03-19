@@ -14,7 +14,7 @@ The Tyk Dashboard UI provides the following functionality to support working wit
  - Using templates
    - [when creating an API]({{< ref "product-stack/tyk-dashboard/advanced-configurations/templates/template-designer#using-a-template-when-creating-a-new-api" >}})
    - [when importing an OpenAPI description or API definition]({{< ref "product-stack/tyk-dashboard/advanced-configurations/templates/template-designer#using-a-template-when-importing-an-openapi-description-or-api-definition" >}})
- - [Managing templates]({{< ref "product-stack/tyk-dashboard/advanced-configurations/templates/template-designer#" >}})
+ - [Managing templates]({{< ref "product-stack/tyk-dashboard/advanced-configurations/templates/template-designer#managing-templates" >}})
 
 API Templates can be found in the **API Templates** section of the **API Management** menu in the Tyk Dashboard. This screen lists all the templates currently registered with Tyk and displays their names and short descriptions. It also gives access to options to create and manage templates.
 
