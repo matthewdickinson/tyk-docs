@@ -116,7 +116,7 @@ In this example the track endpoint middleware has been configured for HTTP `GET`
 #### Configuring the middleware in the API Designer
 You can use the API Designer in the Tyk Dashboard to configure the track endpoint middleware for your Tyk Classic API by following these steps.
 
-#### Step 1: Add an endpoint for the path and select the plugin
+##### Step 1: Add an endpoint for the path and select the plugin
 From the **Endpoint Designer** add an endpoint that matches the path for which you want to allow access. Select the **Track endpoint** plugin.
 
 {{< img src="img/dashboard/analytics/classic_track_endpoint.png" alt="Select the middleware" >}}
