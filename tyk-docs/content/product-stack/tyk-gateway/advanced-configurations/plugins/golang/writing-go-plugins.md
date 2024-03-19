@@ -169,7 +169,7 @@ func MyPluginFunction(w http.ResponseWriter, r *http.Request) {
 ```
 `ctx.GetSession` returns an UserSession object, the Go data structure can be found [here](https://github.com/TykTechnologies/tyk/blob/master/user/session.go#L87)
 
-Here is an [example]({{ < ref "https://github.com/TykTechnologies/custom-plugin-examples/blob/master/plugins/go-auth-multiple_hook_example/main.go#L135" >}}) custom Go plugin that makes use of the session object.
+Here is an [example](https://github.com/TykTechnologies/custom-plugin-examples/blob/master/plugins/go-auth-multiple_hook_example/main.go#L135) custom Go plugin that makes use of the session object.
 
 ## Terminating the request
 You can terminate the request within your custom Go plugin and provide an HTTP response to the originating client, such that the plugin behaves similarly to a [virtual endpoint]({{< ref "advanced-configuration/compose-apis/virtual-endpoints" >}}).
