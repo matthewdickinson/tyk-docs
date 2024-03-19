@@ -112,7 +112,7 @@ If the example [API-level]({{< ref "product-stack/tyk-gateway/middleware/respons
  - `X-New`
 
 ### Fixing response headers that leak upstream server data
-A middleware called `header_transform` was added in Tyk 2.1 specfically to allow you to  ensure that headers such as `Location` and `Link` reflect the outward facade of your API Gateway and also align with the expected response location to be terminated at the gateway, not the hidden upstream proxy.
+A middleware called `header_transform` was added in Tyk 2.1 specfically to allow you to ensure that headers such as `Location` and `Link` reflect the outward facade of your API Gateway and also align with the expected response location to be terminated at the gateway, not the hidden upstream proxy.
 
 This is configured by adding a new `rev_proxy_header_cleanup` object to the `response_processors` section of your API definition.
 
