@@ -5,7 +5,7 @@ description: "API traffic analytics aggregated by endpoint"
 tags: ["traffic analytics", "analytics", "track endpoint", "endpoint tracking", "analytics", "transaction logging", "middleware", "per-endpoint", "Tyk OAS", "Tyk Classic"]
 ---
 
-To get a tabular view of how your API traffic is performing at the endpoint level, you can select the Activity by endpoint option in the navigation and see a tabular view of your API endpoints. This table will list out your API endpoints by their traffic volume and you’ll be able to see when they were last accessed:
+To get a tabular view of how your API traffic is performing at the endpoint level, you can select the Activity by Endpoint option in the navigation and see a tabular view of your API endpoints. This table will list your API endpoints by their traffic volume and you’ll be able to see when they were last accessed:
 
 {{< img src="img/dashboard/analytics/endpoint_popularity.png" alt="Activity by endpoint" >}}
 
