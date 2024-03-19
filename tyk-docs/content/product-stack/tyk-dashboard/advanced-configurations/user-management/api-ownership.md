@@ -109,4 +109,4 @@ When working with Tyk Classic APIs, you manage owners for an API by modifying th
 | Method | Endpoint            | Action                                                                                                                |
 |--------|---------------------|-----------------------------------------------------------------------------------------------------------------------|
 | `PUT`  | `/api/apis/{apiId}` | Update the API definition for the specified API - CRUD API owners in the `user_owners` and `user_group_owners` fields |
-| `GET`  | `/api/apis/{apiID}` | Retrieve the API definition for the specified API - ownership details in `user_owners` and `user_group_owners` fields |
+| `GET`  | `/api/apis/{apiID}` | Retrieve the API definition for the specified API - ownership details are included in `user_owners` and `user_group_owners` fields |
