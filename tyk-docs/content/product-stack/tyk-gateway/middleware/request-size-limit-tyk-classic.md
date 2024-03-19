@@ -18,7 +18,7 @@ There are three different levels of granularity that can be used when configurin
  - [endpoint-level]({{< ref "product-stack/tyk-gateway/middleware/request-size-limit-tyk-classic#applying-a-size-limit-for-a-specific-endpoint" >}}): affecting a single API endpoint
 
 ### Applying a size limit for a specific API
-You can configure a request size limit (in bytes) to an API by configuring the `global_size_limit` to the `version` element of the API Definition, for example:
+You can configure a request size limit (in bytes) to an API by configuring the `global_size_limit` within the `version` element of the API Definition, for example:
 ```
 "global_size_limit": 2500 
 ```
