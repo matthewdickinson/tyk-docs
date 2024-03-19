@@ -40,7 +40,7 @@ An API template asset has the following structure:
 When you use a template during the [creation]({{< ref "getting-started/using-oas-definitions/create-an-oas-api" >}}) of an API, the fields configured in `data` will be pre-set in your new API. You are able to modify these during and after creation of the template. No link is created between the API and the template, so changes made to the API will not impact the template.
 
 ### Merging with an OpenAPI description or Tyk OAS API definition
-When you use a template during the creation of an API where you [import]({{< ref "getting-started/using-oas-definitions/import-an-oas-api" >}}) the OpenAPI document or a full Tyk OAS API definition, the template is used as the starting point with the imported description merged over the top. If the `x-tyk-api-gateway` extension exists in the template, it will be applied to the newly created API.
+When you use a template during the creation of an API where you [import]({{< ref "getting-started/using-oas-definitions/import-an-oas-api" >}}) the OpenAPI document or a full Tyk OAS API definition, the template is combined with the imported OAS description. If the `x-tyk-api-gateway` extension exists in the template, it will be applied to the newly created API.
 
 Where there are clashes between configuration in the OpenAPI description and the template:
  - for maps, such as `paths` and `components`, new keys will be added alongside any existing ones from the template
