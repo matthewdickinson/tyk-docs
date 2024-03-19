@@ -11,7 +11,7 @@ aliases:
   - /plugins/supported-languages/golang/
 ---
 
-Golang plugins are a very flexible and powerful way to extend the functionality of Tyk by attaching custom logic (written in Golang) to certain [hooks]({{< ref "plugins/plugin-types/plugintypes" >}}) in the Tyk [middleware chain]({{< ref "concepts/middleware-execution-order" >}}). The chain of middleware is specific to an API and gets created at API re-load time, so when Tyk Gateway performs an API re-load it also loads any custom middleware and "injects" them into a chain to be called at different stages of the HTTP request life cycle.
+Golang plugins are a very flexible and powerful way to extend the functionality of Tyk by attaching custom logic (written in Golang) to certain [hooks]({{< ref "plugins/plugin-types/plugintypes" >}}) in the Tyk [middleware chain]({{< ref "concepts/middleware-execution-order" >}}). The chain of middleware is specific to an API and gets created at API re-load time. When Tyk Gateway performs an API re-load it also loads any custom middleware and "injects" them into a chain to be called at different stages of the HTTP request life cycle.
 
 For a quick-start guide to working with Go plugins, start [here]({{< ref "plugins/tutorials/quick-starts/go/quickstart" >}}).
 
